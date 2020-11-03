@@ -114,7 +114,7 @@ ID 702, Size 1, Sent in CSteamEngine::CheckForLowBattery
 ID 704, Size 1, Sent in CUser::SignalAppsToShutDown 
 ID 705, Size 4, Sent in CAPIJobCheckFileSignature::BYieldingRunAPIJob 
 ID 711, Size 260, Sent in CConfigStore::BEnsureInitialized CConfigStore::FlushToDisk 
-ID 801, Size 272, Sent in CUserFriends::ActivateGameOverlayInviteDialog CUserFriends::ActivateGameOverlayToStore CUserFriends::ActivateGameOverlayToUser CUserFriends::ActivateGameOverlayToWebPage 
+ID 801, Size 2064, Sent in CUserFriends::ActivateGameOverlayInviteDialog CUserFriends::ActivateGameOverlayToStore CUserFriends::ActivateGameOverlayToUser CUserFriends::ActivateGameOverlayToWebPage 
 ID 802, Size 284, Sent in CClientJobClanState::BYieldingRunClientJob CUserFriends::ScheduledCheckForPostingClanEvents 
 ID 835, Size 1, Sent in CUserFriends::ReinitAudio 
 ID 836, Size 1, Sent in CUserFriends::RunFrame 
