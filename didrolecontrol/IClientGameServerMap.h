@@ -1,0 +1,46 @@
+class IClientGameServerMap
+{
+	virtual unknown_ret GetHSteamUser() = 0;
+	virtual CSteamID GetSteamID() = 0;
+	virtual void LogOn() = 0;
+	virtual void LogOff() = 0;
+	virtual uint8 BLoggedOn() = 0;
+	virtual uint8 BSecure() = 0;
+	virtual uint32 GetLogonState() = 0;
+	virtual uint8 BConnected() = 0;
+	virtual uint32 RaiseConnectionPriority( EConnectionPriority ) = 0;
+	virtual void ResetConnectionPriority( int32 ) = 0;
+	virtual void SetCellID( uint32 ) = 0;
+	virtual void TrackSteamUsageEvent( ESteamUsageEvent, const uint8 *, uint32 ) = 0;
+	virtual uint32 SendUserConnectAndAuthenticate( uint32, const void *, uint32, CSteamID * ) = 0;
+	virtual CSteamID CreateUnauthenticatedUserConnection() = 0;
+	virtual void SendUserDisconnect( CSteamID ) = 0;
+	virtual uint8 BSetServerType( int32, uint32, uint32, uint16, uint16, uint16, const char *, const char *, bool ) = 0;
+	virtual uint8 BUpdateUserData( CSteamID, const char *, uint32 ) = 0;
+	virtual void UpdateStatus( int32, int32, int32, const char *, const char *, const char * ) = 0;
+	virtual void UpdateSpectatorPort( uint16 ) = 0;
+	virtual void SetGameTags( const char * ) = 0;
+	virtual void SetGameData( const char * ) = 0;
+	virtual void SetCountOfSimultaneousGuestUsersPerSteamAccount( int32 ) = 0;
+	virtual uint8 EnumerateConnectedUsers( int32, ConnectedUserInfo_t * ) = 0;
+	virtual void GetGameplayStats() = 0;
+	virtual uint64 GetServerReputation() = 0;
+	virtual uint8 RequestUserGroupStatus( CSteamID, CSteamID ) = 0;
+	virtual uint32 GetPublicIP() = 0;
+	virtual uint32 GetAuthSessionTicket( void *, int32, uint32 * ) = 0;
+	virtual uint32 BeginAuthSession( const void *, int32, CSteamID ) = 0;
+	virtual void EndAuthSession( CSteamID ) = 0;
+	virtual void CancelAuthTicket( uint32 ) = 0;
+	virtual uint32 IsUserSubscribedAppInTicket( CSteamID, uint32 ) = 0;
+	virtual uint8 _BGetUserAchievementStatus( CSteamID, const char * ) = 0;
+	virtual void _GSSetSpawnCount( uint32 ) = 0;
+	virtual uint8 _GSGetSteam2GetEncryptionKeyToSendToNewClient( void *, uint32 *, uint32 ) = 0;
+	virtual uint8 _GSSendSteam2UserConnect( uint32, const void *, uint32, uint32, uint16, const void *, uint32 ) = 0;
+	virtual uint8 _GSSendSteam3UserConnect( CSteamID, uint32, const void *, uint32 ) = 0;
+	virtual uint8 _GSSendUserConnect( uint32, uint32, uint16, const void *, uint32 ) = 0;
+	virtual uint8 _GSRemoveUserConnect( uint32 ) = 0;
+	virtual uint8 _GSUpdateStatus( int32, int32, int32, const char *, const char *, const char * ) = 0;
+	virtual uint8 _GSCreateUnauthenticatedUser( CSteamID * ) = 0;
+	virtual uint8 _GSSendUserDisconnect( CSteamID, uint32 ) = 0;
+};
+

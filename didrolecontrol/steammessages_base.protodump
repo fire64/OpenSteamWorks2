@@ -1,0 +1,22 @@
+
+steammessages_base.proto"Ò
+CMsgProtoBufHeader
+client_steam_id (
+client_session_id (
+routing_appid (+
+job_id_source
+ (:18446744073709551615+
+job_id_target (:18446744073709551615
+target_job_name (	"8
+	CMsgMulti
+size_unzipped (
+message_body ("‘
+CMsgAuthTicket
+estate (
+eresult (:2
+steam_id (
+game_id (
+h_steam_pipe (
+
+ticket_crc (
+ticket (BH€ 

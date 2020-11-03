@@ -1,0 +1,46 @@
+class CSteamClient
+{
+	virtual unknown_ret CreateSteamPipe() = 0;
+	virtual unknown_ret BReleaseSteamPipe( int32 ) = 0;
+	virtual unknown_ret CreateGlobalUser( int32 * ) = 0;
+	virtual unknown_ret ConnectToGlobalUser( int32 ) = 0;
+	virtual unknown_ret CreateLocalUser( int32 *, EAccountType ) = 0;
+	virtual unknown_ret ReleaseUser( int32, int32 ) = 0;
+	virtual unknown_ret IsValidHSteamUserPipe( int32, int32 ) = 0;
+	virtual unknown_ret GetIClientUser( int32, int32, const char * ) = 0;
+	virtual unknown_ret GetIClientGameServer( int32, int32, const char * ) = 0;
+	virtual unknown_ret SetLocalIPBinding( uint32, uint16 ) = 0;
+	virtual unknown_ret GetUniverseName( EUniverse ) = 0;
+	virtual unknown_ret GetIClientFriends( int32, int32, const char * ) = 0;
+	virtual unknown_ret GetIClientUtils( int32, const char * ) = 0;
+	virtual unknown_ret GetIClientBilling( int32, int32, const char * ) = 0;
+	virtual unknown_ret GetIClientMatchmaking( int32, int32, const char * ) = 0;
+	virtual unknown_ret GetIClientApps( int32, int32, const char * ) = 0;
+	virtual unknown_ret GetIClientContentServer( int32, int32, const char * ) = 0;
+	virtual unknown_ret GetIClientMasterServerUpdater( int32, int32, const char * ) = 0;
+	virtual unknown_ret GetIClientMatchmakingServers( int32, int32, const char * ) = 0;
+	virtual unknown_ret RunFrame() = 0;
+	virtual unknown_ret GetIPCCallCount() = 0;
+	virtual unknown_ret GetIClientUserStats( int32, int32, const char * ) = 0;
+	virtual unknown_ret GetIClientGameServerStats( int32, int32, const char * ) = 0;
+	virtual unknown_ret GetIClientNetworking( int32, int32, const char * ) = 0;
+	virtual unknown_ret GetIClientRemoteStorage( int32, int32, const char * ) = 0;
+	virtual unknown_ret SetWarningMessageHook( void ( * )( int32, const char * ) ) = 0;
+	virtual unknown_ret GetIClientGameCoordinator( int32, int32, const char * ) = 0;
+	virtual unknown_ret SetOverlayNotificationPosition( ENotificationPosition ) = 0;
+	virtual unknown_ret IsOverlayEnabled() = 0;
+	virtual unknown_ret GetAPICallResult( int32, uint64, void *, int32, int32, bool * ) = 0;
+	virtual unknown_ret GetIClientDepotBuilder( int32, int32, const char * ) = 0;
+	virtual unknown_ret ConCommandInit( IConCommandBaseAccessor * ) = 0;
+	virtual unknown_ret GetIClientAppManager( int32, int32, const char * ) = 0;
+	virtual unknown_ret GetIClientConfigStore( int32, int32, const char * ) = 0;
+	virtual unknown_ret BOverlayNeedsPresent() = 0;
+	virtual unknown_ret GetIClientGameStats( int32, int32, const char * ) = 0;
+	virtual unknown_ret GetIClientHTTP( int32, int32, const char * ) = 0;
+	virtual unknown_ret BShutdownIfAllPipesClosed() = 0;
+	virtual unknown_ret ~CSteamClient() = 0;
+	virtual unknown_ret ~CSteamClient() = 0;
+	virtual unknown_ret GetIPCServerMap() = 0;
+	virtual unknown_ret OnDebugTextArrived( const char * ) = 0;
+};
+

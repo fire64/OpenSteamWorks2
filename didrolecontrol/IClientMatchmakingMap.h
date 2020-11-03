@@ -1,0 +1,44 @@
+class IClientMatchmakingMap
+{
+	virtual uint32 GetFavoriteGameCount() = 0;
+	virtual uint8 GetFavoriteGame( int32, uint32 *, uint32 *, uint16 *, uint16 *, uint32 *, uint32 * ) = 0;
+	virtual uint32 AddFavoriteGame( uint32, uint32, uint16, uint16, uint32, uint32 ) = 0;
+	virtual uint8 RemoveFavoriteGame( uint32, uint32, uint16, uint16, uint32 ) = 0;
+	virtual uint64 RequestLobbyList() = 0;
+	virtual void AddRequestLobbyListStringFilter( const char *, const char *, ELobbyComparison ) = 0;
+	virtual void AddRequestLobbyListNumericalFilter( const char *, int32, ELobbyComparison ) = 0;
+	virtual void AddRequestLobbyListNearValueFilter( const char *, int32 ) = 0;
+	virtual void AddRequestLobbyListFilterSlotsAvailable( int32 ) = 0;
+	virtual void AddRequestLobbyListDistanceFilter( ELobbyDistanceFilter ) = 0;
+	virtual void AddRequestLobbyListResultCountFilter( int32 ) = 0;
+	virtual CSteamID GetLobbyByIndex( int32 ) = 0;
+	virtual uint64 CreateLobby( ELobbyType, int32 ) = 0;
+	virtual uint64 JoinLobby( CSteamID ) = 0;
+	virtual void LeaveLobby( CSteamID ) = 0;
+	virtual uint8 InviteUserToLobby( CSteamID, CSteamID ) = 0;
+	virtual uint32 GetNumLobbyMembers( CSteamID ) = 0;
+	virtual CSteamID GetLobbyMemberByIndex( CSteamID, int32 ) = 0;
+	virtual const char * GetLobbyData( CSteamID, const char * ) = 0;
+	virtual uint8 SetLobbyData( CSteamID, const char *, const char * ) = 0;
+	virtual uint32 GetLobbyDataCount( CSteamID ) = 0;
+	virtual uint8 GetLobbyDataByIndex( CSteamID, int32, char *, int32, char *, int32 ) = 0;
+	virtual uint8 DeleteLobbyData( CSteamID, const char * ) = 0;
+	virtual const char * GetLobbyMemberData( CSteamID, CSteamID, const char * ) = 0;
+	virtual void SetLobbyMemberData( CSteamID, const char *, const char * ) = 0;
+	virtual uint8 SendLobbyChatMsg( CSteamID, const void *, int32 ) = 0;
+	virtual uint32 GetLobbyChatEntry( CSteamID, int32, CSteamID*, void *, int32, EChatEntryType * ) = 0;
+	virtual uint8 RequestLobbyData( CSteamID ) = 0;
+	virtual void SetLobbyGameServer( CSteamID, uint32, uint16, CSteamID ) = 0;
+	virtual uint8 GetLobbyGameServer( CSteamID, uint32 *, uint16 *, CSteamID* ) = 0;
+	virtual uint8 SetLobbyMemberLimit( CSteamID, int32 ) = 0;
+	virtual uint32 GetLobbyMemberLimit( CSteamID ) = 0;
+	virtual void SetLobbyVoiceEnabled( CSteamID, bool ) = 0;
+	virtual uint8 RequestFriendsLobbies() = 0;
+	virtual uint8 SetLobbyType( CSteamID, ELobbyType ) = 0;
+	virtual uint8 SetLobbyJoinable( CSteamID, bool ) = 0;
+	virtual CSteamID GetLobbyOwner( CSteamID ) = 0;
+	virtual uint8 SetLobbyOwner( CSteamID, CSteamID ) = 0;
+	virtual uint32 GetGMSServerCount() = 0;
+	virtual uint8 GetGMSServerAddress( int32, uint32 *, uint16 * ) = 0;
+};
+

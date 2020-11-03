@@ -1,0 +1,45 @@
+class IClientBillingMap
+{
+	virtual uint8 GetActivationCodeInfo( const char * ) = 0;
+	virtual uint8 PurchaseWithActivationCode( const char * ) = 0;
+	virtual uint8 CancelLicense( uint32, int32 ) = 0;
+	virtual uint8 AcknowledgePurchaseReceipt( uint32 ) = 0;
+	virtual uint32 GetLicensePackageID( uint32 ) = 0;
+	virtual uint32 GetLicenseTimeCreated( uint32 ) = 0;
+	virtual uint32 GetLicenseTimeNextProcess( uint32 ) = 0;
+	virtual uint32 GetLicenseMinuteLimit( uint32 ) = 0;
+	virtual uint32 GetLicenseMinutesUsed( uint32 ) = 0;
+	virtual uint32 GetLicensePaymentMethod( uint32 ) = 0;
+	virtual uint32 GetLicenseFlags( uint32 ) = 0;
+	virtual const char * GetLicensePurchaseCountryCode( uint32 ) = 0;
+	virtual uint32 GetLicenseTerritoryCode( uint32 ) = 0;
+	virtual uint8 GetLicenseInfo( uint32, uint32 *, uint32 *, int32 *, int32 *, EPaymentMethod *, uint32 *, int32 *, char * ) = 0;
+	virtual uint32 GetReceiptPackageID( uint32 ) = 0;
+	virtual uint32 GetReceiptStatus( uint32 ) = 0;
+	virtual uint32 GetReceiptResultDetail( uint32 ) = 0;
+	virtual uint32 GetReceiptTransTime( uint32 ) = 0;
+	virtual uint64 GetReceiptTransID( uint32 ) = 0;
+	virtual uint8 GetReceiptAcknowledged( uint32 ) = 0;
+	virtual uint32 GetReceiptPaymentMethod( uint32 ) = 0;
+	virtual uint32 GetReceiptBaseCost( uint32 ) = 0;
+	virtual uint32 GetReceiptTotalDiscount( uint32 ) = 0;
+	virtual uint32 GetReceiptTax( uint32 ) = 0;
+	virtual uint32 GetReceiptShipping( uint32 ) = 0;
+	virtual uint32 GetReceiptCurrencyCode( uint32 ) = 0;
+	virtual const char * GetReceiptCountryCode( uint32 ) = 0;
+	virtual const char * GetReceiptErrorHeadline( uint32 ) = 0;
+	virtual const char * GetReceiptErrorString( uint32 ) = 0;
+	virtual const char * GetReceiptErrorLinkText( uint32 ) = 0;
+	virtual const char * GetReceiptErrorLinkURL( uint32 ) = 0;
+	virtual uint32 GetNumLicenses() = 0;
+	virtual uint32 GetNumReceipts() = 0;
+	virtual uint8 PurchaseWithMachineID( uint32, const char * ) = 0;
+	virtual uint8 GetReceiptCardInfo( uint32, int32 *, char *, char *, char *, char *, char * ) = 0;
+	virtual uint8 GetReceiptBillingAddress( uint32, char *, char *, char *, char *, char *, char *, char *, char *, char * ) = 0;
+	virtual uint32 GetReceiptLineItemCount( uint32 ) = 0;
+	virtual uint8 GetReceiptLineItemInfo( uint32, uint32, uint32 *, uint32 *, uint32 *, uint32 *, uint32 *, ECurrencyCode * ) = 0;
+	virtual void EnableTestLicense( uint32 ) = 0;
+	virtual void DisableTestLicense( uint32 ) = 0;
+	virtual uint8 ActivateOEMTicket( const char * ) = 0;
+};
+

@@ -1,0 +1,46 @@
+class IClientUserStatsMap
+{
+	virtual uint32 GetNumStats( CGameID ) = 0;
+	virtual const char * GetStatName( CGameID, uint32 ) = 0;
+	virtual uint32 GetStatType( CGameID, const char * ) = 0;
+	virtual uint32 GetNumAchievements( CGameID ) = 0;
+	virtual const char * GetAchievementName( CGameID, uint32 ) = 0;
+	virtual uint8 RequestCurrentStats( CGameID ) = 0;
+	virtual uint8 GetStat( CGameID, const char *, int32 * ) = 0;
+	virtual uint8 GetStat( CGameID, const char *, float * ) = 0;
+	virtual uint8 SetStat( CGameID, const char *, int32 ) = 0;
+	virtual uint8 SetStat( CGameID, const char *, float ) = 0;
+	virtual uint8 UpdateAvgRateStat( CGameID, const char *, float, double ) = 0;
+	virtual uint8 GetAchievement( CGameID, const char *, bool *, uint32 * ) = 0;
+	virtual uint8 SetAchievement( CGameID, const char * ) = 0;
+	virtual uint8 ClearAchievement( CGameID, const char * ) = 0;
+	virtual uint8 StoreStats( CGameID ) = 0;
+	virtual uint32 GetAchievementIcon( CGameID, const char *, EGetAchievementIcon ) = 0;
+	virtual const char * GetAchievementDisplayAttribute( CGameID, const char *, const char *, bool ) = 0;
+	virtual uint8 IndicateAchievementProgress( CGameID, const char *, uint32, uint32 ) = 0;
+	virtual void SetMaxStatsLoaded( uint32 ) = 0;
+	virtual uint64 RequestUserStats( CSteamID, CGameID ) = 0;
+	virtual uint8 GetUserStat( CSteamID, CGameID, const char *, int32 * ) = 0;
+	virtual uint8 GetUserStat( CSteamID, CGameID, const char *, float * ) = 0;
+	virtual uint8 GetUserAchievement( CSteamID, CGameID, const char *, bool *, uint32 * ) = 0;
+	virtual uint8 ResetAllStats( CGameID, bool ) = 0;
+	virtual uint64 FindOrCreateLeaderboard( const char *, ELeaderboardSortMethod, ELeaderboardDisplayType ) = 0;
+	virtual uint64 FindLeaderboard( const char * ) = 0;
+	virtual const char * GetLeaderboardName( uint64 ) = 0;
+	virtual uint32 GetLeaderboardEntryCount( uint64 ) = 0;
+	virtual uint32 GetLeaderboardSortMethod( uint64 ) = 0;
+	virtual uint32 GetLeaderboardDisplayType( uint64 ) = 0;
+	virtual uint64 DownloadLeaderboardEntries( uint64, ELeaderboardDataRequest, int32, int32 ) = 0;
+	virtual uint64 DownloadLeaderboardEntriesForUsers( uint64, CSteamID *, int32 ) = 0;
+	virtual uint8 GetDownloadedLeaderboardEntry( uint64, int32, LeaderboardEntry_t *, int32 *, int32 ) = 0;
+	virtual uint64 AttachLeaderboardUGC( uint64, uint64 ) = 0;
+	virtual uint64 UploadLeaderboardScore( uint64, ELeaderboardUploadScoreMethod, int32, const int32 *, int32 ) = 0;
+	virtual uint64 GetNumberOfCurrentPlayers() = 0;
+	virtual uint32 GetNumAchievedAchievements( CGameID ) = 0;
+	virtual const char * GetLastAchievementUnlocked( CGameID ) = 0;
+	virtual void RequestGlobalAchievementPercentages( CGameID ) = 0;
+	virtual uint32 GetMostAchievedAchievementInfo( CGameID, char *, uint32, float *, bool * ) = 0;
+	virtual uint32 GetNextMostAchievedAchievementInfo( CGameID, int32, char *, uint32, float *, bool * ) = 0;
+	virtual uint8 GetAchievementAchievedPercent( CGameID, const char *, float * ) = 0;
+};
+
