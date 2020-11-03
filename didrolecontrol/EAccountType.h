@@ -9,4 +9,6 @@ enum EAccountType
 	k_EAccountTypeContentServer,	// Content Server
 	k_EAccountTypeClan,	// Clan
 	k_EAccountTypeChat,	// Chat
+	k_EAccountTypeConsoleUser,	// Console User
+	k_EAccountTypeAnonymousUser,	// Anonymous User
 }

@@ -1,0 +1,73 @@
+
+.steammessages_friendmessages.steamclient.proto,steammessages_unified_base.steamclient.proto"ñ
+)CFriendMessages_GetRecentMessages_Request
+steamid1 (
+steamid2 (L
+count (B=‚µ9If non-zero, cap the number of recent messages to return.s
+most_recent_conversation (BQ‚µMGrab the block of chat from the most recent conversation (a ~5 minute period)©
+rtime32_start_time (BŒ‚µ‡If non-zero, return only messages with timestamps greater or equal to this. If zero, we only return messages from a recent time cutoff.E
+bbcode_format (B.‚µ*Return the results with bbcode formatting.„
+start_ordinal (Bm‚µiCombined with start time, only messages after this ordinal are returned (dedupes messages in same second)M
+	time_last (B:‚µ6if present/non-zero, return only messages before this.
+ordinal_last	 ("
+*CFriendMessages_GetRecentMessages_Response~
+messages (29.CFriendMessages_GetRecentMessages_Response.FriendMessageB1‚µ-Array of messages, returned newest to oldest.
+more_available (W
+FriendMessage
+	accountid (
+	timestamp (
+message (	
+ordinal ("ß
+1CFriendsMessages_GetActiveMessageSessions_Request
+lastmessage_since (Bd‚µ`return only session information where a chat message has been sent since this time (for polling)¨
+only_sessions_with_messages (B‚‚µ~If non-zero, return only message sessions that have messages since our message cutoff. If zero, we return all active sessions."ü
+2CFriendsMessages_GetActiveMessageSessions_Responseb
+message_sessions (2H.CFriendsMessages_GetActiveMessageSessions_Response.FriendMessageSessioni
+	timestamp (BV‚µRThis should be passed in the next request as lastmessage_since to poll for updatesw
+FriendMessageSession
+accountid_friend (
+last_message (
+	last_view (
+unread_message_count ("Â
+#CFriendMessages_SendMessage_Request
+steamid (
+chat_entry_type (
+message (	
+contains_bbcode (
+echo_to_sender (
+low_priority (
+client_message_id (	"Œ
+$CFriendMessages_SendMessage_Response
+modified_message (	
+server_timestamp (
+ordinal (
+message_without_bb_code (	"U
+'CFriendMessages_AckMessage_Notification
+steamid_partner (
+	timestamp ("<
+)CFriendMessages_IsInFriendsUIBeta_Request
+steamid ("e
+*CFriendMessages_IsInFriendsUIBeta_Response
+online_in_friendsui (
+has_used_friendsui ("†
+,CFriendMessages_IncomingMessage_Notification
+steamid_friend (
+chat_entry_type (
+from_limited_account (
+message (	 
+rtime32_server_timestamp (
+ordinal (
+
+local_echo (
+message_no_bbcode (	
+low_priority	 (2Œ
+FriendMessages¥
+GetRecentMessages*.CFriendMessages_GetRecentMessages_Request+.CFriendMessages_GetRecentMessages_Response"7‚µ3Get a log of recent chat messages between two usersÀ
+GetActiveMessageSessions2.CFriendsMessages_GetActiveMessageSessions_Request3.CFriendsMessages_GetActiveMessageSessions_Response";‚µ7Get information about recent offline messages and chats
+SendMessage$.CFriendMessages_SendMessage_Request%.CFriendMessages_SendMessage_Response"#‚µSend a chat message to a friendŒ
+
+AckMessage(.CFriendMessages_AckMessage_Notification.NoResponse"G‚µCAcknowledge that we have seen the most recent message from a friend›
+IsInFriendsUIBeta*.CFriendMessages_IsInFriendsUIBeta_Request+.CFriendMessages_IsInFriendsUIBeta_Response"-‚µ)See if a friend is in the friendsui beta.a‚µ]A service for relaying and logging friend messages (user-to-user chats and offline messaging)2 
+FriendMessagesClientr
+IncomingMessage-.CFriendMessages_IncomingMessage_Notification.NoResponse"#‚µNew chat message from a friend.
+NotifyAckMessageEcho(.CFriendMessages_AckMessage_Notification.NoResponse">‚µ:A session acked an unread message, echo to other sessions.ÀµB€

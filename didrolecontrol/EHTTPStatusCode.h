@@ -35,10 +35,14 @@ enum EHTTPStatusCode
 	k_EHTTPStatusCodeUnsupportedMediaType,	// Unsupported Media Type
 	k_EHTTPStatusCodeRequestedRangeNotSatisfiable,	// Requested range not satisfiable
 	k_EHTTPStatusCodeExpectationFailed,	// Expectation Failed
+	k_EHTTPStatusCodeUnknownHTTP4xx,	// Unknown HTTP 4xx
+	k_EHTTPStatusCodeTooManyRequests = 429,	// Too Many Requests
+	k_EHTTPStatusCodeConnectionClosed = 444,	// Connection closed
 	k_EHTTPStatusCodeInternalServerError = 500,	// Internal Server Error
 	k_EHTTPStatusCodeNotImplemented,	// Not Implemented
 	k_EHTTPStatusCodeBadGateway,	// Bad Gateway
 	k_EHTTPStatusCodeServiceUnavailable,	// Service Unavailable
 	k_EHTTPStatusCodeGatewayTimeOut,	// Gateway Time-out
 	k_EHTTPStatusCodeHTTPVersionNotSupported,	// HTTP Version not supported
+	k_EHTTPStatusCodeUnknownHTTP5xx = 599,	// Unknown HTTP 5xx
 }

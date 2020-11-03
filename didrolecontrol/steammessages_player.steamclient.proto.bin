@@ -1,0 +1,476 @@
+
+&steammessages_player.steamclient.proto,steammessages_unified_base.steamclient.proto"4
+2CPlayer_GetMutualFriendsForIncomingInvites_Request"\
+&CPlayer_IncomingInviteMutualFriendList
+steamid (!
+mutual_friend_account_ids ("å
+3CPlayer_GetMutualFriendsForIncomingInvites_ResponseU
+$incoming_invite_mutual_friends_lists (2'.CPlayer_IncomingInviteMutualFriendList"Ì
+CPlayer_GetOwnedGames_Request2
+steamid (B!ÇµThe player we're asking about\
+include_appinfo (BCÇµ?true if we want additional details (name, icon) about each gameå
+include_played_free_games (BiÇµeFree games are excluded by default.  If this is set, free games the user has played will be returned.M
+appids_filter (B6Çµ2if set, restricts result set to the passed in apps\
+include_free_sub (BBÇµ>Some games are in the free sub, which are excluded by default."Û
+CPlayer_GetOwnedGames_Response
+
+game_count (3
+games (2$.CPlayer_GetOwnedGames_Response.Gameá
+Game
+appid (
+name (	
+playtime_2weeks (
+playtime_forever (
+img_icon_url (	
+img_logo_url (	#
+has_community_visible_stats ( 
+playtime_windows_forever (
+playtime_mac_forever	 (
+playtime_linux_forever
+ ("M
+CPlayer_GetPlayNext_Request
+max_age_seconds (
+ignore_appids ("H
+CPlayer_GetPlayNext_Response
+last_update_time (
+appids ("7
+&CPlayer_GetFriendsGameplayInfo_Request
+appid ("Ó
+'CPlayer_GetFriendsGameplayInfo_ResponseK
+	your_info (28.CPlayer_GetFriendsGameplayInfo_Response.OwnGameplayInfoM
+in_game (2<.CPlayer_GetFriendsGameplayInfo_Response.FriendsGameplayInfoU
+played_recently (2<.CPlayer_GetFriendsGameplayInfo_Response.FriendsGameplayInfoQ
+played_ever (2<.CPlayer_GetFriendsGameplayInfo_Response.FriendsGameplayInfoJ
+owns (2<.CPlayer_GetFriendsGameplayInfo_Response.FriendsGameplayInfoQ
+in_wishlist (2<.CPlayer_GetFriendsGameplayInfo_Response.FriendsGameplayInfo^
+FriendsGameplayInfo
+steamid (
+minutes_played (
+minutes_played_forever (~
+OwnGameplayInfo
+steamid (
+minutes_played (
+minutes_played_forever (
+in_wishlist (
+owned ("á
+&CPlayer_GetFriendsAppsActivity_RequestÅ
+news_language (	BjÇµfLanguage for which to query about news items (for the being_discussed results). DEPRECATED AND UNUSED.Y
+request_flags (BBÇµ>Flags describing the request; see EGetFriendsAppsActivityFlags"£
+'CPlayer_GetFriendsAppsActivity_Response∏
+trending (27.CPlayer_GetFriendsAppsActivity_Response.AppFriendsInfoBmÇµiApps that friends have played more this week than last, with list of friends who've played more this week¥
+recent_purchases (27.CPlayer_GetFriendsAppsActivity_Response.AppFriendsInfoBaÇµ]Apps friends have played in the past two weeks for which the user recently acquired a licenseû
+unowned (27.CPlayer_GetFriendsAppsActivity_Response.AppFriendsInfoBTÇµPApps friends have played in the past two weeks for which the user has no licenseØ
+popular (27.CPlayer_GetFriendsAppsActivity_Response.AppFriendsInfoBeÇµaApps friends have played in the past two weeks, for which the user has a license, sorted by count∆
+dont_forget (27.CPlayer_GetFriendsAppsActivity_Response.AppFriendsInfoBxÇµtApps friends have played in the past two weeks which the user has neither purchased nor played in the past two weeks¡
+being_discussed (27.CPlayer_GetFriendsAppsActivity_Response.AppFriendsInfoBoÇµkOwned apps that friends have posted status or screenshots for in the past two weeks. DEPRECATED AND UNUSED.î
+new_to_group (27.CPlayer_GetFriendsAppsActivity_Response.AppFriendsInfoBEÇµAOwned apps that none of your friends had played prior to 2 weeks.ô
+returned_to_group (27.CPlayer_GetFriendsAppsActivity_Response.AppFriendsInfoBEÇµAOwned apps that friends hadn't played for a while, but are again.f
+active_friend_count	 (:0BFÇµBNumber of friends with non-trivial activity in the past two weeks.ê
+FriendPlayTime
+steamid (s
+minutes_played_this_week (BQÇµMMinutes this friend played the game (from the enclosing structure) this week.}
+minutes_played_two_weeks (B[ÇµWMinutes this friend played the game (from the enclosing structure) in the past 2 weeks.p
+minutes_played_forever (BPÇµLMinutes this friend played the game (from the enclosing structure) all time.Ü
+event_count (BqÇµmNumber of events involving this user & app. (Only set for results in being_discussed.) DEPRECATED AND UNUSED.˜
+AppFriendsInfo
+appid (…
+friends (27.CPlayer_GetFriendsAppsActivity_Response.FriendPlayTimeBÇµ{Friends (w/ playtime) that meet a specific criteria -- e.g. for trending, only includes friends w/ more playtime this week.â
+display_order (BrÇµnIndex indicating the order in which this app should be displayed, relative to other apps in the same response."3
+"CPlayer_GetGameBadgeLevels_Request
+appid ("µ
+#CPlayer_GetGameBadgeLevels_Response
+player_level (:
+badges (2*.CPlayer_GetGameBadgeLevels_Response.Badge<
+Badge
+level (
+series (
+border_color ("l
+$CPlayer_GetProfileBackground_Request2
+steamid (B!ÇµThe player we're asking about
+language (	"È
+ProfileItem
+communityitemid (B
+image_small (	B-Çµ)small image used in backpack or selection)
+image_large (	BÇµthe image itself
+name (	BÇµenglish name'
+
+item_title (	BÇµlocalized title3
+item_description (	BÇµlocalized description
+appid (
+	item_type (
+
+item_class	 (+
+
+movie_webm
+ (	BÇµURL to webm, if any)
+	movie_mp4 (	BÇµURL to mp4, if any7
+movie_webm_small (	BÇµURL to small webm, if any5
+movie_mp4_small (	BÇµURL to small mp4, if anyV
+equipped_flags (B>Çµ:Special flags set when equipped (EProfileItemEquippedFlag)"Q
+%CPlayer_GetProfileBackground_Response(
+profile_background (2.ProfileItem"?
+$CPlayer_SetProfileBackground_Request
+communityitemid ("'
+%CPlayer_SetProfileBackground_Response"p
+(CPlayer_GetMiniProfileBackground_Request2
+steamid (B!ÇµThe player we're asking about
+language (	"U
+)CPlayer_GetMiniProfileBackground_Response(
+profile_background (2.ProfileItem"C
+(CPlayer_SetMiniProfileBackground_Request
+communityitemid ("+
+)CPlayer_SetMiniProfileBackground_Response"f
+CPlayer_GetAvatarFrame_Request2
+steamid (B!ÇµThe player we're asking about
+language (	"E
+CPlayer_GetAvatarFrame_Response"
+avatar_frame (2.ProfileItem"9
+CPlayer_SetAvatarFrame_Request
+communityitemid ("!
+CPlayer_SetAvatarFrame_Response"i
+!CPlayer_GetAnimatedAvatar_Request2
+steamid (B!ÇµThe player we're asking about
+language (	"B
+"CPlayer_GetAnimatedAvatar_Response
+avatar (2.ProfileItem"<
+!CPlayer_SetAnimatedAvatar_Request
+communityitemid ("$
+"CPlayer_SetAnimatedAvatar_Response"8
+$CPlayer_GetProfileItemsOwned_Request
+language (	"¯
+%CPlayer_GetProfileItemsOwned_Response)
+profile_backgrounds (2.ProfileItem.
+mini_profile_backgrounds (2.ProfileItem#
+avatar_frames (2.ProfileItem&
+animated_avatars (2.ProfileItem'
+profile_modifiers (2.ProfileItem"L
+'CPlayer_GetProfileItemsEquipped_Request
+steamid (
+language (	"ˆ
+(CPlayer_GetProfileItemsEquipped_Response(
+profile_background (2.ProfileItem-
+mini_profile_background (2.ProfileItem"
+avatar_frame (2.ProfileItem%
+animated_avatar (2.ProfileItem&
+profile_modifier (2.ProfileItem"z
++CPlayer_SetEquippedProfileItemFlags_Request
+communityitemid (2
+flags (B#ÇµSet of EProfileItemEquippedFlag".
+,CPlayer_SetEquippedProfileItemFlags_Response"!
+CPlayer_GetEmoticonList_Request"€
+ CPlayer_GetEmoticonList_Response=
+	emoticons (2*.CPlayer_GetEmoticonList_Response.Emoticonx
+Emoticon
+name (	
+count (
+time_last_used (
+	use_count (
+time_received (
+appid ("\
+'CPlayer_GetAchievementsProgress_Request
+steamid (
+language (	
+appids ("ç
+(CPlayer_GetAchievementsProgress_Response[
+achievement_progress (2=.CPlayer_GetAchievementsProgress_Response.AchievementProgressÉ
+AchievementProgress
+appid (
+unlocked (
+total (
+
+percentage (
+all_unlocked (
+
+cache_time ("3
+ CPlayer_GetFavoriteBadge_Request
+steamid ("∞
+!CPlayer_GetFavoriteBadge_Response
+has_favorite_badge (
+badgeid (
+communityitemid (
+	item_type (
+border_color (
+appid (
+level ("L
+ CPlayer_SetFavoriteBadge_Request
+communityitemid (
+badgeid ("#
+!CPlayer_SetFavoriteBadge_Response"c
+'CPlayer_GetProfileCustomization_Request
+steamid ('
+include_inactive_customizations ("Ö
+ProfileCustomizationSlot
+slot (
+appid (
+publishedfileid (
+item_assetid (
+item_contextid (
+notes (	
+title (	
+	accountid (
+badgeid	 (
+border_color
+ (
+item_classid (
+item_instanceid ("—
+ProfileCustomization6
+customization_type (2.EProfileCustomizationType
+large ((
+slots (2.ProfileCustomizationSlot
+active (8
+customization_style (2.EProfileCustomizationStyle"/
+ProfileTheme
+theme_id (	
+title (	"ò
+(CPlayer_GetProfileCustomization_Response-
+customizations (2.ProfileCustomization
+slots_available ($
+profile_theme (2.ProfileTheme"+
+)CPlayer_GetProfileThemesAvailable_Request"S
+*CPlayer_GetProfileThemesAvailable_Response%
+profile_themes (2.ProfileTheme"3
+CPlayer_SetProfileTheme_Request
+theme_id (	""
+ CPlayer_SetProfileTheme_Response"I
+#CPlayer_PostStatusToFriends_Request
+appid (
+status_text (	"&
+$CPlayer_PostStatusToFriends_Response"e
+CPlayer_GetPostedStatus_Request2
+steamid (B!ÇµThe player we're asking about
+postid ("z
+ CPlayer_GetPostedStatus_Response
+	accountid (
+postid (
+status_text (	
+deleted (
+appid ("4
+"CPlayer_DeletePostedStatus_Request
+postid ("%
+#CPlayer_DeletePostedStatus_Response"Ç
+"CPlayer_GetLastPlayedTimes_Request\
+min_last_played (BCÇµ?The most recent last-played time the client already knows about"Í
+#CPlayer_GetLastPlayedTimes_Response8
+games (2).CPlayer_GetLastPlayedTimes_Response.Gameà
+Game
+appid (
+last_playtime (
+playtime_2weeks (
+playtime_forever (
+first_playtime ( 
+playtime_windows_forever (
+playtime_mac_forever (
+playtime_linux_forever (
+first_windows_playtime	 (
+first_mac_playtime
+ (
+first_linux_playtime (
+last_windows_playtime (
+last_mac_playtime (
+last_linux_playtime ("
+CPlayer_AcceptSSA_Request"
+CPlayer_AcceptSSA_Response"!
+CPlayer_GetNicknameList_Request"û
+ CPlayer_GetNicknameList_ResponseC
+	nicknames (20.CPlayer_GetNicknameList_Response.PlayerNickname5
+PlayerNickname
+	accountid (
+nickname (	")
+'CPlayer_GetPerFriendPreferences_Request"π
+PerFriendPreferences
+	accountid (
+nickname (	7
+notifications_showingame (2.ENotificationSetting7
+notifications_showonline (2.ENotificationSetting9
+notifications_showmessages (2.ENotificationSetting0
+sounds_showingame (2.ENotificationSetting0
+sounds_showonline (2.ENotificationSetting2
+sounds_showmessages (2.ENotificationSetting7
+notifications_sendmobile	 (2.ENotificationSetting"V
+(CPlayer_GetPerFriendPreferences_Response*
+preferences (2.PerFriendPreferences"U
+'CPlayer_SetPerFriendPreferences_Request*
+preferences (2.PerFriendPreferences"*
+(CPlayer_SetPerFriendPreferences_Response"c
+CPlayer_AddFriend_RequestF
+steamid (B5Çµ1Steam ID of user to whom to send a friend invite."Ü
+CPlayer_AddFriend_ResponseO
+invite_sent (B:Çµ6True if the operation was successful, false otherwise.Ü
+friend_relationship (BiÇµethe resulting relationship.  Depending on state, may move directly to friends rather than invite sent
+result ("R
+CPlayer_RemoveFriend_Request2
+steamid (B!ÇµSteam ID of friend to remove."\
+CPlayer_RemoveFriend_Response;
+friend_relationship (BÇµthe resulting relationship"
+CPlayer_IgnoreFriend_Request
+steamid (N
+unignore (B<Çµ8If set, remove from ignore/block list instead of adding "\
+CPlayer_IgnoreFriend_Response;
+friend_relationship (BÇµthe resulting relationship")
+'CPlayer_GetCommunityPreferences_Request"Œ
+CPlayer_CommunityPreferences)
+hide_adult_content_violence (:true$
+hide_adult_content_sex (:true%
+parenthesize_nicknames (:falseM
+text_filter_setting (2.ETextFilterSetting:k_ETextFilterSettingEnabled(
+text_filter_ignore_friends (:true"
+text_filter_words_revision (
+timestamp_updated ("^
+(CPlayer_GetCommunityPreferences_Response2
+preferences (2.CPlayer_CommunityPreferences"]
+'CPlayer_SetCommunityPreferences_Request2
+preferences (2.CPlayer_CommunityPreferences"*
+(CPlayer_SetCommunityPreferences_Response"$
+"CPlayer_GetTextFilterWords_Request"é
+CPlayer_TextFilterWords'
+text_filter_custom_banned_words (	&
+text_filter_custom_clean_words (	"
+text_filter_words_revision ("N
+#CPlayer_GetTextFilterWords_Response'
+words (2.CPlayer_TextFilterWords"@
+,CPlayer_GetNewSteamAnnouncementState_Request
+language ("¶
+-CPlayer_GetNewSteamAnnouncementState_Response
+state (
+announcement_headline (	
+announcement_url (	
+time_posted (
+announcement_gid ("`
+/CPlayer_UpdateSteamAnnouncementLastRead_Request
+announcement_gid (
+time_posted ("2
+0CPlayer_UpdateSteamAnnouncementLastRead_Response"$
+"CPlayer_GetPrivacySettings_Request"Ã
+CPrivacySettings
+privacy_state (
+privacy_state_inventory (
+privacy_state_gifts ( 
+privacy_state_ownedgames (
+privacy_state_playtime (!
+privacy_state_friendslist ("R
+#CPlayer_GetPrivacySettings_Response+
+privacy_settings (2.CPrivacySettings"3
+"CPlayer_GetDurationControl_Request
+appid ("∏
+#CPlayer_GetDurationControl_Response
+
+is_enabled (
+seconds (
+seconds_today (
+is_steamchina_account (
+is_age_verified (
+seconds_allowed_today ("`
+$CPlayer_LastPlayedTimes_Notification8
+games (2).CPlayer_GetLastPlayedTimes_Response.Game"j
+*CPlayer_FriendNicknameChanged_Notification
+	accountid (
+nickname (	
+is_echo_to_self ("K
+6CPlayer_FriendEquippedProfileItemsChanged_Notification
+	accountid ("ß
+.CPlayer_NewSteamAnnouncementState_Notification
+state (
+announcement_headline (	
+announcement_url (	
+time_posted (
+announcement_gid ("f
+0CPlayer_CommunityPreferencesChanged_Notification2
+preferences (2.CPlayer_CommunityPreferences"V
++CPlayer_TextFilterWordsChanged_Notification'
+words (2.CPlayer_TextFilterWords"q
+0CPlayer_PerFriendPreferencesChanged_Notification
+	accountid (*
+preferences (2.PerFriendPreferences"Z
++CPlayer_PrivacySettingsChanged_Notification+
+privacy_settings (2.CPrivacySettings*≈
+EProfileCustomizationType&
+"k_EProfileCustomizationTypeInvalid 6
+2k_EProfileCustomizationTypeRareAchievementShowcase,
+(k_EProfileCustomizationTypeGameCollector+
+'k_EProfileCustomizationTypeItemShowcase,
+(k_EProfileCustomizationTypeTradeShowcase%
+!k_EProfileCustomizationTypeBadges+
+'k_EProfileCustomizationTypeFavoriteGame1
+-k_EProfileCustomizationTypeScreenshotShowcase)
+%k_EProfileCustomizationTypeCustomText,
+(k_EProfileCustomizationTypeFavoriteGroup	-
+)k_EProfileCustomizationTypeRecommendation
++
+'k_EProfileCustomizationTypeWorkshopItem)
+%k_EProfileCustomizationTypeMyWorkshop.
+*k_EProfileCustomizationTypeArtworkShowcase,
+(k_EProfileCustomizationTypeVideoShowcase%
+!k_EProfileCustomizationTypeGuides'
+#k_EProfileCustomizationTypeMyGuides+
+'k_EProfileCustomizationTypeAchievements)
+%k_EProfileCustomizationTypeGreenlight+
+'k_EProfileCustomizationTypeMyGreenlight%
+!k_EProfileCustomizationTypeSalien*ô
+EProfileCustomizationStyle'
+#k_EProfileCustomizationStyleDefault (
+$k_EProfileCustomizationStyleSelected&
+"k_EProfileCustomizationStyleRarest*
+&k_EProfileCustomizationStyleMostRecent&
+"k_EProfileCustomizationStyleRandom,
+(k_EProfileCustomizationStyleHighestRated*Ö
+ENotificationSetting*
+&k_ENotificationSettingNotifyUseDefault  
+k_ENotificationSettingAlways
+k_ENotificationSettingNever*∞
+ETextFilterSetting(
+$k_ETextFilterSettingSteamLabOptedOut 
+k_ETextFilterSettingEnabled-
+)k_ETextFilterSettingEnabledAllowProfanity 
+k_ETextFilterSettingDisabled2”4
+PlayerÔ
+"GetMutualFriendsForIncomingInvites3.CPlayer_GetMutualFriendsForIncomingInvites_Request4.CPlayer_GetMutualFriendsForIncomingInvites_Response"^ÇµZGet me the mutual friends for each of my pending incoming invites (individuals and clans).Ä
+GetOwnedGames.CPlayer_GetOwnedGames_Request.CPlayer_GetOwnedGames_Response".Çµ*Return a list of games owned by the player
+GetPlayNext.CPlayer_GetPlayNext_Request.CPlayer_GetPlayNext_Response"3Çµ/Return suggested games for player to play next.∏
+GetFriendsGameplayInfo'.CPlayer_GetFriendsGameplayInfo_Request(.CPlayer_GetFriendsGameplayInfo_Response"KÇµGGet a list of friends who are playing, have played, own, or want a gameÆ
+GetFriendsAppsActivity'.CPlayer_GetFriendsAppsActivity_Request(.CPlayer_GetFriendsAppsActivity_Response"AÇµ=Get lists of apps friends are active in, in a variety of ways∂
+GetGameBadgeLevels#.CPlayer_GetGameBadgeLevels_Request$.CPlayer_GetGameBadgeLevels_Response"UÇµQReturns the Steam Level of a user, the Badge level for the game, and if it's foil¶
+GetProfileBackground%.CPlayer_GetProfileBackground_Request&.CPlayer_GetProfileBackground_Response"?Çµ;Gets which profile background is active for a specific userç
+SetProfileBackground%.CPlayer_SetProfileBackground_Request&.CPlayer_SetProfileBackground_Response"&Çµ"Sets the user's profile background∑
+GetMiniProfileBackground).CPlayer_GetMiniProfileBackground_Request*.CPlayer_GetMiniProfileBackground_Response"DÇµ@Gets which mini profile background is active for a specific userû
+SetMiniProfileBackground).CPlayer_SetMiniProfileBackground_Request*.CPlayer_SetMiniProfileBackground_Response"+Çµ'Sets the user's mini profile backgroundé
+GetAvatarFrame.CPlayer_GetAvatarFrame_Request .CPlayer_GetAvatarFrame_Response"9Çµ5Gets which avatar frame is active for a specific userá
+SetAvatarFrame.CPlayer_SetAvatarFrame_Request .CPlayer_SetAvatarFrame_Response"2Çµ.Sets the user's avatar frame for their profileö
+GetAnimatedAvatar".CPlayer_GetAnimatedAvatar_Request#.CPlayer_GetAnimatedAvatar_Response"<Çµ8Gets which animated avatar is active for a specific userì
+SetAnimatedAvatar".CPlayer_SetAnimatedAvatar_Request#.CPlayer_SetAnimatedAvatar_Response"5Çµ1Sets the user's animated avatar for their profile†
+GetProfileItemsOwned%.CPlayer_GetProfileItemsOwned_Request&.CPlayer_GetProfileItemsOwned_Response"9Çµ5Returns the items the user can equip on their profile¨
+GetProfileItemsEquipped(.CPlayer_GetProfileItemsEquipped_Request).CPlayer_GetProfileItemsEquipped_Response"<Çµ8Returns the items the user has equipped on their profileß
+SetEquippedProfileItemFlags,.CPlayer_SetEquippedProfileItemFlags_Request-.CPlayer_SetEquippedProfileItemFlags_Response"+Çµ'Sets special flags on the equipped itemë
+GetEmoticonList .CPlayer_GetEmoticonList_Request!.CPlayer_GetEmoticonList_Response"9Çµ5Gets a list of the emoticons a user has with metadataπ
+GetAchievementsProgress(.CPlayer_GetAchievementsProgress_Request).CPlayer_GetAchievementsProgress_Response"IÇµEGets the achievement completion stats for the specified list of apps.ê
+GetFavoriteBadge!.CPlayer_GetFavoriteBadge_Request".CPlayer_GetFavoriteBadge_Response"5Çµ1Gets the badge the user has set as their favoriteÑ
+SetFavoriteBadge!.CPlayer_SetFavoriteBadge_Request".CPlayer_SetFavoriteBadge_Response")Çµ%Sets the badge  as the users favorite•
+GetProfileCustomization(.CPlayer_GetProfileCustomization_Request).CPlayer_GetProfileCustomization_Response"5Çµ1Returns the customizations (if any) for a profileù
+GetProfileThemesAvailable*.CPlayer_GetProfileThemesAvailable_Request+.CPlayer_GetProfileThemesAvailable_Response"'Çµ#Gets themes available for the user.{
+SetProfileTheme .CPlayer_SetProfileTheme_Request!.CPlayer_SetProfileTheme_Response"#ÇµSelects a theme for the profileë
+PostStatusToFriends$.CPlayer_PostStatusToFriends_Request%.CPlayer_PostStatusToFriends_Response"-Çµ)Posts custom status text into the blotterÜ
+GetPostedStatus .CPlayer_GetPostedStatus_Request!.CPlayer_GetPostedStatus_Response".Çµ*Gets a posted status text for a user by idí
+DeletePostedStatus#.CPlayer_DeletePostedStatus_Request$.CPlayer_DeletePostedStatus_Response"1Çµ-Deletes a posted status text for a user by idï
+ClientGetLastPlayedTimes#.CPlayer_GetLastPlayedTimes_Request$.CPlayer_GetLastPlayedTimes_Response".Çµ*Gets the last-played times for the accountc
+	AcceptSSA.CPlayer_AcceptSSA_Request.CPlayer_AcceptSSA_Response"ÇµUser is accepting the SSAî
+GetNicknameList .CPlayer_GetNicknameList_Request!.CPlayer_GetNicknameList_Response"<Çµ8Gets the list of nicknames this user has for other usersΩ
+GetPerFriendPreferences(.CPlayer_GetPerFriendPreferences_Request).CPlayer_GetPerFriendPreferences_Response"MÇµIGets the list of per-friend preferences this user has set for other users∑
+SetPerFriendPreferences(.CPlayer_SetPerFriendPreferences_Request).CPlayer_SetPerFriendPreferences_Response"GÇµCSets the logged in user's per-friend preferences for the given users
+	AddFriend.CPlayer_AddFriend_Request.CPlayer_AddFriend_Response"-Çµ)Invites another Steam user to be a friendÇ
+RemoveFriend.CPlayer_RemoveFriend_Request.CPlayer_RemoveFriend_Response"3Çµ/Removes a friend or ignores a friend suggestion¶
+IgnoreFriend.CPlayer_IgnoreFriend_Request.CPlayer_IgnoreFriend_Response"WÇµSBlocks or unblocks communication with the user.  Despite name, can be a non-friend.û
+GetCommunityPreferences(.CPlayer_GetCommunityPreferences_Request).CPlayer_GetCommunityPreferences_Response".Çµ*Returns the player's community preferencesõ
+SetCommunityPreferences(.CPlayer_SetCommunityPreferences_Request).CPlayer_SetCommunityPreferences_Response"+Çµ'Sets the player's community preferencesõ
+GetTextFilterWords#.CPlayer_GetTextFilterWords_Request$.CPlayer_GetTextFilterWords_Response":Çµ6Get the custom text filtering dictionary for this userﬁ
+GetNewSteamAnnouncementState-.CPlayer_GetNewSteamAnnouncementState_Request..CPlayer_GetNewSteamAnnouncementState_Response"_Çµ[Calculates and returns what to display for UI that renders new steam announcement availableº
+UpdateSteamAnnouncementLastRead0.CPlayer_UpdateSteamAnnouncementLastRead_Request1.CPlayer_UpdateSteamAnnouncementLastRead_Response"4Çµ0Marks latest announcement timestamp read by userÇ
+GetPrivacySettings#.CPlayer_GetPrivacySettings_Request$.CPlayer_GetPrivacySettings_Response"!ÇµGet current privacy settings.å
+GetDurationControl#.CPlayer_GetDurationControl_Request$.CPlayer_GetDurationControl_Response"+Çµ'Get gameplay duration control settings.-Çµ)A service for accessing Steam player data2¶
+PlayerClientå
+NotifyLastPlayedTimes%.CPlayer_LastPlayedTimes_Notification.NoResponse"?Çµ;Notification from server to client of more recent play time§
+NotifyFriendNicknameChanged+.CPlayer_FriendNicknameChanged_Notification.NoResponse"KÇµGNotification from server to client that a friend's nickname has changedÀ
+'NotifyFriendEquippedProfileItemsChanged7.CPlayer_FriendEquippedProfileItemsChanged_Notification.NoResponse"ZÇµVNotification from server to client that a friend's equipped profile items have changed§
+NotifyNewSteamAnnouncementState/.CPlayer_NewSteamAnnouncementState_Notification.NoResponse"CÇµ?Notifies client of changes to steam announcement state for userπ
+!NotifyCommunityPreferencesChanged1.CPlayer_CommunityPreferencesChanged_Notification.NoResponse"TÇµPNotification from server to client that their community preferences have changed≤
+NotifyTextFilterWordsChanged,.CPlayer_TextFilterWordsChanged_Notification.NoResponse"WÇµSNotification from server to client that their text filtering dictionary has changed™
+!NotifyPerFriendPreferencesChanged1.CPlayer_PerFriendPreferencesChanged_Notification.NoResponse"EÇµANotification from server that per-friend preferences have changedú
+#NotifyPrivacyPrivacySettingsChanged,.CPlayer_PrivacySettingsChanged_Notification.NoResponse":Çµ6Notification from server that privacy settings changed.Çµ&Steam player data client notifications¿µBÄ

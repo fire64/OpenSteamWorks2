@@ -1,0 +1,20 @@
+
+$steammessages_auth.steamclient.proto,steammessages_unified_base.steamclient.proto"C
+ CCloudGaming_CreateNonce_Request
+platform (	
+appid ("B
+!CCloudGaming_CreateNonce_Response
+nonce (	
+expiry ("M
+%CCloudGaming_GetTimeRemaining_Request
+platform (	
+
+appid_list ("F
+CCloudGaming_TimeRemaining
+appid (
+minutes_remaining ("V
+&CCloudGaming_GetTimeRemaining_Response,
+entries (2.CCloudGaming_TimeRemaining2ò
+CloudGaming‹
+CreateNonce!.CCloudGaming_CreateNonce_Request".CCloudGaming_CreateNonce_Response"5‚µ1Create a nonce for a cloud gaming service session¥
+GetTimeRemaining&.CCloudGaming_GetTimeRemaining_Request'.CCloudGaming_GetTimeRemaining_Response"@‚µ<Get the amount of streaming time remaining for a set of apps-‚µ)Methods for Steam cloud gaming operationsB€

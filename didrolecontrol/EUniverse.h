@@ -5,5 +5,4 @@ enum EUniverse
 	k_EUniverseBeta,	// Beta
 	k_EUniverseInternal,	// Internal
 	k_EUniverseDev,	// Dev
-	k_EUniverseRC,	// RC
 }

@@ -1,12 +1,9 @@
 class IClientDepotBuilderMap
 {
-	virtual uint32 InitializeDepotBuildForConfigFile( const char * ) = 0;
-	virtual uint8 StartBuild( uint32, bool, bool, const char * ) = 0;
-	virtual uint8 BGetDepotBuildStatus( uint32, EDepotBuildStatus *, uint32 * ) = 0;
-	virtual uint8 CloseDepotBuildHandle( uint32 ) = 0;
-	virtual uint32 ReconstructDepotFromManifestAndChunks( const char *, const char *, const char * ) = 0;
-	virtual uint8 BGetChunkCounts( uint32, uint32 *, uint32 * ) = 0;
-	virtual uint8 GetManifestGIDs( uint32, uint64 *, uint64 * ) = 0;
-	virtual uint32 RebaseAndBuildDepot( uint64, uint64 ) = 0;
+	virtual void * BGetDepotBuildStatus( uint64, EDepotBuildStatus *, uint64 *, uint64 * ) = 0;
+	virtual void * VerifyChunkStore( uint32, uint32, char const* ) = 0;
+	virtual void * DownloadDepot( uint32, uint32, uint64, uint64, uint64, uint32 ) = 0;
+	virtual void * StartDepotBuild( uint32, uint32, uint32, char const* ) = 0;
+	virtual void * CommitAppBuild( uint32, uint32, uint32 const*, uint64 const*, char const*, char const* ) = 0;
 };
 

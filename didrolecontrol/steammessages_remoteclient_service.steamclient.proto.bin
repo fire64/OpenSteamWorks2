@@ -1,0 +1,21 @@
+
+4steammessages_remoteclient_service.steamclient.proto,steammessages_unified_base.steamclient.proto1steammessages_remoteclient_service_messages.proto2‘
+RemoteClientà
+GetPairingInfo%.CRemoteClient_GetPairingInfo_Request&.CRemoteClient_GetPairingInfo_Response"'Çµ#Get pairing info for an entered PIN~
+NotifyOnline".CRemoteClient_Online_Notification.NoResponse"=Çµ9Let the service know we're available for status listenersn
+NotifyReplyPacket'.CRemoteClient_ReplyPacket_Notification.NoResponse"#ÇµSend a reply to a remote clientü
+AllocateTURNServer).CRemoteClient_AllocateTURNServer_Request*.CRemoteClient_AllocateTURNServer_Response"2Çµ.Allocate a TURN server for a streaming sessionß
+AllocateRelayServer*.CRemoteClient_AllocateRelayServer_Request+.CRemoteClient_AllocateRelayServer_Response"7Çµ3Allocate a UDP relay server for a streaming session}
+AllocateSDR".CRemoteClient_AllocateSDR_Request#.CRemoteClient_AllocateSDR_Response"%Çµ!Allocate SDR resources for an appÉ
+SendSteamBroadcastPacket*.CRemoteClient_SteamBroadcast_Notification.NoResponse".Çµ*Broadcast a packet to remote Steam clients{
+SendSteamToSteamPacket(.CRemoteClient_SteamToSteam_Notification.NoResponse"*Çµ&Send a packet to a remote Steam client®
+SendRemotePlaySessionStarted#.CRemotePlay_SessionStarted_Request$.CRemotePlay_SessionStarted_Response"=Çµ9Let the server know that we started a Remote Play sessionî
+SendRemotePlaySessionStopped(.CRemotePlay_SessionStopped_Notification.NoResponse"=Çµ9Let the server know that we stopped a Remote Play sessionà
+SendRemotePlayTogetherPacket!.CRemotePlayTogether_Notification.NoResponse"8Çµ4Send a Remote Play Together packet to a Steam client.Çµ*Methods for Steam remote client operations2î
+RemoteClientSteamClientê
+NotifyRegisterStatusUpdate0.CRemoteClient_RegisterStatusUpdate_Notification.NoResponse"3Çµ/Register for status updates with a Steam clientñ
+NotifyUnregisterStatusUpdate2.CRemoteClient_UnregisterStatusUpdate_Notification.NoResponse"5Çµ1Unregister for status updates with a Steam clientp
+NotifyRemotePacket(.CRemoteClient_RemotePacket_Notification.NoResponse"#ÇµSend a packet to a Steam clientÖ
+NotifySteamBroadcastPacket*.CRemoteClient_SteamBroadcast_Notification.NoResponse".Çµ*Broadcast a packet to remote Steam clientsë
+NotifySteamToSteamPacket(.CRemoteClient_SteamToSteam_Notification.NoResponse">Çµ:Send a packet to a Steam client from a remote Steam clientä
+NotifyRemotePlayTogetherPacket!.CRemotePlayTogether_Notification.NoResponse"8Çµ4Send a Remote Play Together packet to a Steam client2Çµ*Methods for Steam remote client operations¿µBÄ

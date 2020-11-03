@@ -2,8 +2,8 @@ class CAdapterSteamBilling002
 {
 	virtual unknown_ret InitCreditCardPurchase( int32, uint32, bool ) = 0;
 	virtual unknown_ret InitPayPalPurchase( int32 ) = 0;
-	virtual unknown_ret GetActivationCodeInfo( const char * ) = 0;
-	virtual unknown_ret PurchaseWithActivationCode( const char * ) = 0;
+	virtual unknown_ret GetActivationCodeInfo( char const* ) = 0;
+	virtual unknown_ret PurchaseWithActivationCode( char const* ) = 0;
 	virtual unknown_ret GetFinalPrice() = 0;
 	virtual unknown_ret CancelPurchase() = 0;
 	virtual unknown_ret CompletePurchase() = 0;
@@ -13,12 +13,11 @@ class CAdapterSteamBilling002
 	virtual unknown_ret Obsolete_GetLicenses() = 0;
 	virtual unknown_ret CancelLicense( int32, int32 ) = 0;
 	virtual unknown_ret GetPurchaseReceipts( bool ) = 0;
-	virtual unknown_ret AcknowledgePurchaseReceipt( uint32 ) = 0;
-	virtual unknown_ret SetBillingAddress( uint32, const char *, const char *, const char *, const char *, const char *, const char *, const char *, const char *, const char * ) = 0;
+	virtual unknown_ret SetBillingAddress( uint32, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const* ) = 0;
 	virtual unknown_ret GetBillingAddress( uint32, char *, char *, char *, char *, char *, char *, char *, char *, char * ) = 0;
-	virtual unknown_ret SetShippingAddress( const char *, const char *, const char *, const char *, const char *, const char *, const char *, const char *, const char * ) = 0;
+	virtual unknown_ret SetShippingAddress( char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const* ) = 0;
 	virtual unknown_ret GetShippingAddress( char *, char *, char *, char *, char *, char *, char *, char *, char * ) = 0;
-	virtual unknown_ret SetCardInfo( uint32, int32, const char *, const char *, const char *, const char *, const char *, const char * ) = 0;
+	virtual unknown_ret SetCardInfo( uint32, int32, char const*, char const*, char const*, char const*, char const*, char const* ) = 0;
 	virtual unknown_ret GetCardInfo( uint32, int32 *, char *, char *, char *, char *, char *, char * ) = 0;
 	virtual unknown_ret GetLicensePackageID( uint32 ) = 0;
 	virtual unknown_ret GetLicenseTimeCreated( uint32 ) = 0;
@@ -33,7 +32,6 @@ class CAdapterSteamBilling002
 	virtual unknown_ret GetReceiptResultDetail( uint32 ) = 0;
 	virtual unknown_ret GetReceiptTransTime( uint32 ) = 0;
 	virtual unknown_ret GetReceiptTransID( uint32 ) = 0;
-	virtual unknown_ret GetReceiptAcknowledged( uint32 ) = 0;
 	virtual unknown_ret GetReceiptPaymentMethod( uint32 ) = 0;
 	virtual unknown_ret GetReceiptBaseCost( uint32 ) = 0;
 	virtual unknown_ret GetReceiptTotalDiscount( uint32 ) = 0;
@@ -42,8 +40,8 @@ class CAdapterSteamBilling002
 	virtual unknown_ret GetReceiptCountryCode( uint32 ) = 0;
 	virtual unknown_ret GetNumLicenses() = 0;
 	virtual unknown_ret GetNumReceipts() = 0;
-	virtual unknown_ret PurchaseWithMachineID( int32, const char * ) = 0;
-	virtual unknown_ret InitClickAndBuyPurchase( int32, int64, const char *, const char * ) = 0;
+	virtual unknown_ret PurchaseWithMachineID( int32, char const* ) = 0;
+	virtual unknown_ret InitClickAndBuyPurchase( int32, int64, char const*, char const* ) = 0;
 	virtual unknown_ret GetPreviousClickAndBuyAccount( int64 *, char *, char * ) = 0;
 };
 

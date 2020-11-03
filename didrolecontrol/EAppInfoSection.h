@@ -15,4 +15,10 @@ enum EAppInfoSection
 	k_EAppInfoSectionItems,	// items
 	k_EAppInfoSectionPolicies,	// policies
 	k_EAppInfoSectionSysreqs,	// sysreqs
+	k_EAppInfoSectionCommunity,	// community
+	k_EAppInfoSectionStore,	// store
+	k_EAppInfoSectionLocalization,	// localization
+	k_EAppInfoSectionBroadcastgamedata,	// broadcastgamedata
+	k_EAppInfoSectionComputed,	// computed
+	k_EAppInfoSectionAlbummetadata,	// albummetadata
 }

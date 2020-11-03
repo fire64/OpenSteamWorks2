@@ -1,0 +1,25 @@
+
+*steammessages_timedtrial.steamclient.proto,steammessages_unified_base.steamclient.proto"5
+$CTimedTrial_GetTimeRemaining_Request
+appid ("„
+%CTimedTrial_GetTimeRemaining_Response
+seconds_played (
+seconds_allowed (
+	packageid (
+mastersub_appid ("K
+"CTimedTrial_RecordPlaytime_Request
+appid (
+seconds_played ("V
+#CTimedTrial_RecordPlaytime_Response
+seconds_played (
+seconds_allowed ("2
+!CTimedTrial_ResetPlaytime_Request
+appid ("U
+"CTimedTrial_ResetPlaytime_Response
+seconds_played (
+seconds_allowed (2›
+
+TimedTrial­
+GetTimeRemaining%.CTimedTrial_GetTimeRemaining_Request&.CTimedTrial_GetTimeRemaining_Response"J‚µFReturns the amount of time a user has left on a timed trial for an app”
+RecordPlaytime#.CTimedTrial_RecordPlaytime_Request$.CTimedTrial_RecordPlaytime_Response"7‚µ3Updates the user's remaining playtime while in game’
+ResetPlaytime".CTimedTrial_ResetPlaytime_Request#.CTimedTrial_ResetPlaytime_Response"8‚µ4Reset the user's remaining playtime (developer only)1‚µ-A service to get user timed trial informationB€

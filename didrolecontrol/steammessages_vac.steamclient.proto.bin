@@ -1,0 +1,25 @@
+
+#steammessages_vac.steamclient.proto,steammessages_unified_base.steamclient.proto"Ï
+(CFileVerification_SignatureCheck_Request
+steamid (
+appid (
+	file_size (
+file_timestamp (
+file_timestamp2 (
+signature_result (
+filename (	
+client_package_version (
+sha1hash	 ("C
+)CFileVerification_SignatureCheck_Response
+deny_operation ("•
++CFileVerification_SteamServiceCheck_Request
+service_status (
+client_package_version (
+launcher_type (
+os_type (
+service_repair ("F
+,CFileVerification_SteamServiceCheck_Response
+attempt_repair (2ﬁ
+FileVerificationè
+SignatureCheck).CFileVerification_SignatureCheck_Request*.CFileVerification_SignatureCheck_Response"&Çµ"File signature check was performedó
+SteamServiceCheck,.CFileVerification_SteamServiceCheck_Request-.CFileVerification_SteamServiceCheck_Response"%Çµ!Steam Service check was performedÇµFile verification servicesBÄ

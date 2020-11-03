@@ -1,17 +1,17 @@
 class IClientGameStatsMap
 {
-	virtual uint64 GetNewSession( int8, uint64, int32, uint32 ) = 0;
-	virtual uint64 EndSession( uint64, uint32, int16 ) = 0;
-	virtual uint32 AddSessionAttributeInt( uint64, const char *, int32 ) = 0;
-	virtual uint32 AddSessionAttributeString( uint64, const char *, const char * ) = 0;
-	virtual uint32 AddSessionAttributeFloat( uint64, const char *, float ) = 0;
-	virtual uint32 AddNewRow( uint64 *, uint64, const char * ) = 0;
-	virtual uint32 CommitRow( uint64 ) = 0;
-	virtual uint32 CommitOutstandingRows( uint64 ) = 0;
-	virtual uint32 AddRowAttributeInt( uint64, const char *, int32 ) = 0;
-	virtual uint32 AddRowAttributeString( uint64, const char *, const char * ) = 0;
-	virtual uint32 AddRowAttributeFloat( uint64, const char *, float ) = 0;
-	virtual uint32 AddSessionAttributeInt64( uint64, const char *, int64 ) = 0;
-	virtual uint32 AddRowAttributeInt64( uint64, const char *, int64 ) = 0;
+	virtual void * GetNewSession( int8, uint64, int32, uint32 ) = 0;
+	virtual void * EndSession( uint64, uint32, int16 ) = 0;
+	virtual void * AddSessionAttributeInt( uint64, char const*, int32 ) = 0;
+	virtual void * AddSessionAttributeString( uint64, char const*, char const* ) = 0;
+	virtual void * AddSessionAttributeFloat( uint64, char const*, float ) = 0;
+	virtual void * AddNewRow( uint64 *, uint64, char const* ) = 0;
+	virtual void * CommitRow( uint64 ) = 0;
+	virtual void * CommitOutstandingRows( uint64 ) = 0;
+	virtual void * AddRowAttributeInt( uint64, char const*, int32 ) = 0;
+	virtual void * AddRowAttributeString( uint64, char const*, char const* ) = 0;
+	virtual void * AddRowAttributeFloat( uint64, char const*, float ) = 0;
+	virtual void * AddSessionAttributeInt64( uint64, char const*, int64 ) = 0;
+	virtual void * AddRowAttributeInt64( uint64, char const*, int64 ) = 0;
 };
 

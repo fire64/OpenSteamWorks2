@@ -33,8 +33,7 @@ enum EResult
 	k_EResultPersistenceFailed,	// Persistence Failed
 	k_EResultLockingFailed,	// Locking Failed
 	k_EResultSessionReplaced,	// Session Replaced
-	k_EResultLockingFailed = 33,	// Locking Failed
-	k_EResultConnectionFailed = 35,	// Connection Failed
+	k_EResultConnectionFailed,	// Connection Failed
 	k_EResultHandshakeFailed,	// Handshake Failed
 	k_EResultIOOperationFailed,	// I/O Operation Failed
 	k_EResultDisconnectedByRemoteHost,	// Disconnected By Remote Host
@@ -43,7 +42,11 @@ enum EResult
 	k_EResultIgnored,	// Ignored
 	k_EResultNoMatch,	// No match
 	k_EResultAccountDisabled,	// Account Disabled
-	k_EResultTryAnotherCM = 48,	// Try another CM
+	k_EResultServiceReadOnly,	// Service Read Only
+	k_EResultAccountNotFeatured,	// Account Not Featured
+	k_EResultAdministratorOK,	// Administrator OK
+	k_EResultContentVersion,	// Content Version
+	k_EResultTryAnotherCM,	// Try another CM
 	k_EResultPasswordRequiredToKickSession,	// Password required to kick session
 	k_EResultAlreadyLoggedInElsewhere,	// Already Logged In Elsewhere
 	k_EResultRequestSuspendedPaused,	// Request suspended/paused
@@ -68,4 +71,48 @@ enum EResult
 	k_EResultFacebookQueryReturnedAnError,	// Facebook query returned an error
 	k_EResultExpiredLoginAuthCode,	// Expired Login Auth Code
 	k_EResultIPLoginRestrictionFailed,	// IP Login Restriction Failed
+	k_EResultAccountLockedDown,	// Account Locked Down
+	k_EResultAccountLogonDeniedVerifiedEmailRequired,	// Account Logon Denied Verified Email Required
+	k_EResultNoMatchingURL,	// No matching URL
+	k_EResultBadResponse,	// Bad response
+	k_EResultPasswordReentryRequired,	// Password reentry required
+	k_EResultValueIsOutOfRange,	// Value is out of range
+	k_EResultUnexpectedError,	// Unexpected error
+	k_EResultFeatureDisabled,	// Feature Disabled
+	k_EResultInvalidCEGSubmission,	// Invalid CEG Submission
+	k_EResultRestrictedDevice,	// Restricted device
+	k_EResultRegionLocked,	// Region Locked
+	k_EResultRateLimitExceeded,	// Rate Limit Exceeded
+	k_EResultAccountLogonDeniedNeedTwoFactorCode,	// Account logon denied, need two-factor code
+	k_EResultItemOrEntryHasBeenDeleted,	// Item or entry has been deleted
+	k_EResultTooManyLogonAttempts,	// Too many logon attempts
+	k_EResultTwoFactorCodeMismatch,	// Two-factor code mismatch
+	k_EResultTwoFactorActivationCodeMismatch,	// Two-factor activation code mismatch
+	k_EResultAccountAssociatedWithMultiplePlayers,	// Account associated with multiple players
+	k_EResultNotModified,	// Not Modified
+	k_EResultNoMobileDeviceAvailable,	// No mobile device available
+	k_EResultTimeIsOutOfSync,	// Time is out of sync
+	k_EResultSMSCodeFailed,	// SMS code failed
+	k_EResultTooManyAccountsAccessThisResource,	// Too many accounts access this resource
+	k_EResultTooManyChangesToThisAccount,	// Too many changes to this account
+	k_EResultTooManyChangesToThisPhoneNumber,	// Too many changes to this phone number
+	k_EResultYouMustRefundThisTransactionToWallet,	// You must refund this transaction to wallet
+	k_EResultSendingOfAnEmailFailed,	// Sending of an email failed
+	k_EResultPurchaseNotYetSettled,	// Purchase not yet settled
+	k_EResultNeedsCaptcha,	// Needs captcha
+	k_EResultGameserverLoginTokenDenied,	// Gameserver login token denied
+	k_EResultGameserverLoginTokenOwnerDenied,	// Gameserver login token owner denied
+	k_EResultInvalidItemType,	// Invalid item type
+	k_EResultIPAddressBanned,	// IP Address Banned
+	k_EResultGameserverLoginTokenExpired,	// Gameserver login token expired
+	k_EResultInsufficientFunds,	// Insufficient funds
+	k_EResultTooManyPending,	// Too many pending
+	k_EResultNoSiteLicensesFound,	// No site licenses found
+	k_EResultNetworkSendExceeded,	// Network send exceeded
+	k_EResultAccountsNotFriends,	// Accounts not friends
+	k_EResultLimitedUserAccount,	// Limited user account
+	k_EResultCantRemoveItem,	// Cant remove item
+	k_EResultAccountHasBeenDeleted,	// Account has been deleted
+	k_EResultAccountHasAnExistingUserCancelledLicense,	// Account has an existing user cancelled license
+	k_EResultDeniedDueToCommunityCooldown,	// Denied due to community cooldown
 }

@@ -1,1166 +1,0 @@
-
- steammessages_clientserver.protosteammessages_base.protoencrypted_app_ticket.proto"
-CMsgClientHeartBeat"õ
- CMsgClientSubscribeToPersonaFeedD
-persona_feeds (2-.CMsgClientSubscribeToPersonaFeed.PersonaFeed1
-PersonaFeed
-steamID (
-	subscribe ("G
-CMsgClientUDSP2PSessionStarted
-steamid_remote (
-appid ("Å
-CMsgClientUDSP2PSessionEnded
-steamid_remote (
-appid (
-session_length_sec (
-session_error (
-nattype (
-
-bytes_recv (
-
-bytes_sent (
-bytes_sent_relay (
-bytes_recv_relay	 (
-time_to_connect_ms
- ("N
-"CMsgClientRegisterAuthTicketWithCM
-protocol_version (
-ticket ("π
-CMsgClientTicketAuthComplete
-steam_id (
-game_id (
-estate (
-eauth_session_response (
-DEPRECATED_ticket (
-
-ticket_crc (
-ticket_sequence ("é
-CMsgClientLogon
-protocol_version (
-obfustucated_private_ip (
-cell_id (
-last_session_id (
-client_package_version (
-client_language (	
-client_os_type ('
-should_remember_password (:false
-wine_version	 (	
-	public_ip (
-	qos_level ( 
-client_supplied_steam_id (
-
-machine_id (
-steam2_auth_ticket) (
-email_address* (	 
-rtime32_account_creation+ (
-account_name2 (	
-password3 (	
-	login_key< (	
-sony_psn_ticketZ (
-sony_psn_service_id[ (	6
-'create_new_psn_linked_account_if_needed\ (:false
-sony_psn_name] (	+
-was_converted_deprecated_msgF (:false%
-anon_user_target_account_nameP (	
-resolved_user_steam_idQ (
-eresult_sentryfileR (
-sha_sentryfileS (
-	auth_codeT (	
-otp_typeU (
-	otp_valueV (
-otp_identifierW (	
-steam2_ticket_requestX ("∑
-CMsgClientLogonResponse
-eresult (:2%
-out_of_game_heartbeat_seconds (!
-in_game_heartbeat_seconds (
-	public_ip (
-rtime32_server_time (
-account_flags (
-cell_id (
-email_domain (	
-steam2_ticket	 (
-eresult_extended
- (
-client_supplied_steamid ("
-CMsgClientLogOff")
-CMsgClientLoggedOff
-eresult (:2":
-CMsgClientCMList
-cm_addresses (
-cm_ports ("m
-CMsgClientP2PConnectionInfo
-steam_id_dest (
-steam_id_src (
-app_id (
-	candidate ("z
-CMsgClientP2PConnectionFailInfo
-steam_id_dest (
-steam_id_src (
-app_id (
-ep2p_session_error ("1
-CMsgClientGetAppOwnershipTicket
-app_id ("]
-'CMsgClientGetAppOwnershipTicketResponse
-eresult (:2
-app_id (
-ticket ("'
-CMsgClientSessionToken
-token ("M
-CMsgClientGameConnectTokens
-max_tokens_to_keep (:10
-tokens ("•
-CMsgGSServerType
-app_id_served (
-flags (
-game_ip_address (
-	game_port (
-game_dir (	
-game_version (	
-game_query_port ("&
-CMsgGSStatusReply
-	is_secure ("{
-CMsgGSPlayerList)
-players (2.CMsgGSPlayerList.Player<
-Player
-steam_id (
-	public_ip (
-token ("G
-CMsgGSUserPlaying
-steam_id (
-	public_ip (
-token ("*
-CMsgGSDisconnectNotice
-steam_id ("ò
-CMsgClientGamesPlayed7
-games_played (2!.CMsgClientGamesPlayed.GamePlayed≈
-
-GamePlayed
-steam_id_gs (
-game_id (
-game_ip_address (
-	game_port (
-	is_secure (
-token (
-game_extra_info (	
-game_data_blob (
-
-process_id	 ("!
-CMsgGSApprove
-steam_id ("I
-
-CMsgGSDeny
-steam_id (
-edeny_reason (
-deny_string (	"4
-
-CMsgGSKick
-steam_id (
-edeny_reason ("ã
-CMsgClientAuthList
-tokens_left (
-last_request_seq ($
-last_request_seq_from_server ( 
-tickets (2.CMsgAuthTicket"ò
-CMsgClientFriendsList
-bincremental (.
-friends (2.CMsgClientFriendsList.Friend9
-Friend
-
-ulfriendid (
-efriendrelationship ("≈
-CMsgClientFriendsGroupsList
-bremoval (
-bincremental (>
-friendGroups (2(.CMsgClientFriendsGroupsList.FriendGroupH
-memberships (23.CMsgClientFriendsGroupsList.FriendGroupsMembership5
-FriendGroup
-nGroupID (
-strGroupName (	=
-FriendGroupsMembership
-	ulSteamID (
-nGroupID ("Â
-CMsgClientLicenseList
-eresult (:20
-licenses (2.CMsgClientLicenseList.LicenseÖ
-License
-
-package_id (
-time_created (
-time_next_process (
-minute_limit (
-minutes_used (
-payment_method (
-flags (
-purchase_country_code (	
-license_type	 (
-territory_code
- (
-change_number ("|
-CMsgClientLBSSetScore
-app_id (
-leaderboard_id (
-score (
-details (
-upload_score_method ("¢
-CMsgClientLBSSetScoreResponse
-eresult (:2
-leaderboard_entry_count (
-score_changed (
-global_rank_previous (
-global_rank_new ("M
-CMsgClientLBSSetUGC
-app_id (
-leaderboard_id (
-ugc_id ("1
-CMsgClientLBSSetUGCResponse
-eresult (:2"ß
-CMsgClientLBSFindOrCreateLB
-app_id (
-leaderboard_sort_method ( 
-leaderboard_display_type (
-create_if_not_found (
-leaderboard_name (	"’
-#CMsgClientLBSFindOrCreateLBResponse
-eresult (:2
-leaderboard_id (
-leaderboard_entry_count ("
-leaderboard_sort_method (:0#
-leaderboard_display_type (:0
-leaderboard_name (	"ü
-CMsgClientLBSGetLBEntries
-app_id (
-leaderboard_id (
-range_start (
-	range_end ( 
-leaderboard_data_request (
-steamids ("¯
-!CMsgClientLBSGetLBEntriesResponse
-eresult (:2
-leaderboard_entry_count (9
-entries (2(.CMsgClientLBSGetLBEntriesResponse.Entryc
-Entry
-steam_id_user (
-global_rank (
-score (
-details (
-ugc_id ("Ò
-CMsgClientAccountInfo
-persona_name (	
-
-ip_country (	
-salt_password (
-sha_digest_Password (
-count_authed_computers (
-locked_with_ipt (
-account_flags (
-facebook_id (
-facebook_name	 (	"ø
-CMsgClientAppMinutesPlayedDataL
-minutes_played (24.CMsgClientAppMinutesPlayedData.AppMinutesPlayedDataO
-AppMinutesPlayedData
-app_id (
-forever (
-last_two_weeks ("9
-CMsgClientIsLimitedAccount
-bis_limited_account ("O
-CMsgClientRequestFriendData
-persona_state_requested (
-friends ("{
-CMsgClientChangeStatus
-persona_state (
-player_name (	
-is_auto_generated_name (
-high_priority ("·
-CMsgClientPersonaState
-status_flags (/
-friends (2.CMsgClientPersonaState.Friendˇ
-Friend
-friendid (
-persona_state (
-game_played_app_id (
-game_server_ip (
-game_server_port (
-persona_state_flags ( 
-online_session_instances (
-published_instance_id (
-player_name (	
-
-query_port (
-steamid_source (
-avatar_hash (
-chat_metadata( (
-last_logoff- (
-
-last_logon. (
-	clan_rank2 (
-	game_name7 (	
-gameid8 (
-game_data_blob< (
-clan_tagA (	
-facebook_nameB (	
-facebook_idC ("5
-CMsgClientFriendProfileInfo
-steamid_friend ("Û
-#CMsgClientFriendProfileInfoResponse
-eresult (:2
-steamid_friend (
-time_created (
-	real_name (	
-	city_name (	
-
-state_name (	
-country_name (	
-headline (	
-summary	 (	
-recent_playtime
- ("å
-CMsgClientServerList-
-servers (2.CMsgClientServerList.ServerE
-Server
-server_type (
-	server_ip (
-server_port ("ß
-CMsgClientRequestedClientStatsB
-stats_to_send (2+.CMsgClientRequestedClientStats.StatsToSendA
-StatsToSend
-client_stat (
-stat_aggregate_method ("¿
-CMsgClientStat20
-stat_detail (2.CMsgClientStat2.StatDetail{
-
-StatDetail
-client_stat (
-ll_value (
-time_of_day (
-cell_id (
-depot_id (
-app_id ("∫
-CMsgClientMMSCreateLobby
-app_id (
-max_members (
-
-lobby_type (
-lobby_flags (
-cell_id (
-	public_ip (
-metadata (
-persona_name_owner (	"^
- CMsgClientMMSCreateLobbyResponse
-app_id (
-steam_id_lobby (
-eresult (:2"V
-CMsgClientMMSJoinLobby
-app_id (
-steam_id_lobby (
-persona_name (	"œ
-CMsgClientMMSJoinLobbyResponse
-app_id (
-steam_id_lobby ( 
-chat_room_enter_response (
-max_members (
-
-lobby_type (
-lobby_flags (
-steam_id_owner (
-metadata (7
-members	 (2&.CMsgClientMMSJoinLobbyResponse.MemberB
-Member
-steam_id (
-persona_name (	
-metadata ("A
-CMsgClientMMSLeaveLobby
-app_id (
-steam_id_lobby ("]
-CMsgClientMMSLeaveLobbyResponse
-app_id (
-steam_id_lobby (
-eresult (:2"Ú
-CMsgClientMMSGetLobbyList
-app_id (
-num_lobbies_requested (
-cell_id (
-	public_ip (2
-filters (2!.CMsgClientMMSGetLobbyList.FilterN
-Filter
-key (	
-value (	
-comparision (
-filter_type ("•
-!CMsgClientMMSGetLobbyListResponse
-app_id (
-eresult (:29
-lobbies (2(.CMsgClientMMSGetLobbyListResponse.Lobby†
-Lobby
-steam_id (
-max_members (
-
-lobby_type (
-lobby_flags (
-metadata (
-num_members (
-distance (
-weight ("¨
-CMsgClientMMSSetLobbyData
-app_id (
-steam_id_lobby (
-steam_id_member (
-max_members (
-
-lobby_type (
-lobby_flags (
-metadata ("_
-!CMsgClientMMSSetLobbyDataResponse
-app_id (
-steam_id_lobby (
-eresult (:2"C
-CMsgClientMMSGetLobbyData
-app_id (
-steam_id_lobby ("≤
-CMsgClientMMSLobbyData
-app_id (
-steam_id_lobby (
-num_members (
-max_members (
-
-lobby_type (
-lobby_flags (
-steam_id_owner (
-metadata (/
-members	 (2.CMsgClientMMSLobbyData.MemberB
-Member
-steam_id (
-persona_name (	
-metadata ("w
-CMsgClientMMSSendLobbyChatMsg
-app_id (
-steam_id_lobby (
-steam_id_target (
-lobby_message ("s
-CMsgClientMMSLobbyChatMsg
-app_id (
-steam_id_lobby (
-steam_id_sender (
-lobby_message ("`
-CMsgClientMMSSetLobbyOwner
-app_id (
-steam_id_lobby (
-steam_id_new_owner ("`
-"CMsgClientMMSSetLobbyOwnerResponse
-app_id (
-steam_id_lobby (
-eresult (:2"ô
-CMsgClientMMSSetLobbyGameServer
-app_id (
-steam_id_lobby (
-game_server_ip (
-game_server_port (
-game_server_steam_id ("ô
-CMsgClientMMSLobbyGameServerSet
-app_id (
-steam_id_lobby (
-game_server_ip (
-game_server_port (
-game_server_steam_id ("s
-CMsgClientMMSUserJoinedLobby
-app_id (
-steam_id_lobby (
-steam_id_user (
-persona_name (	"q
-CMsgClientMMSUserLeftLobby
-app_id (
-steam_id_lobby (
-steam_id_user (
-persona_name (	"c
-CMsgClientMMSInviteToLobby
-app_id (
-steam_id_lobby (
-steam_id_user_invited ("`
-CMsgClientUDSInviteToGame
-steam_id_dest (
-steam_id_src (
-connect_string (	"π
-CMsgClientChatInvite
-steam_id_invited (
-steam_id_chat (
-steam_id_patron (
-chatroom_type (
-steam_id_friend_chat (
-	chat_name (	
-game_id ("ª
-CMsgClientConnectionStats;
-stats_logon (2&.CMsgClientConnectionStats.Stats_Logon;
-stats_vconn (2&.CMsgClientConnectionStats.Stats_VConny
-Stats_Logon
-connect_attempts (
-connect_successes (
-connect_failures (
-connections_dropped (q
-	Stats_UDP
-	pkts_sent (
-
-bytes_sent (
-	pkts_recv (
-pkts_processed (
-
-bytes_recv (µ
-Stats_VConn
-connections_udp (
-connections_tcp (7
-	stats_udp (2$.CMsgClientConnectionStats.Stats_UDP
-pkts_abandoned (
-conn_req_received (
-pkts_resent (
-	msgs_sent (
-msgs_sent_failed (
-	msgs_recv	 (
-datagrams_sent
- (
-datagrams_recv (
-bad_pkts_recv (
-unknown_conn_pkts_recv (
-missed_pkts_recv (
-dup_pkts_recv (!
-failed_connect_challenges (
-micro_sec_avg_latency (
-micro_sec_min_latency (
-micro_sec_max_latency (
-mem_pool_msg_in_use ("ö
-CMsgClientServersAvailableR
-server_types_available (22.CMsgClientServersAvailable.Server_Types_Available(
-Server_Types_Available
-server ("u
-CMsgClientGetUserStats
-game_id (
-	crc_stats (
-schema_local_version (
-steam_id_for_user ("ﬂ
-CMsgClientGetUserStatsResponse
-game_id (
-eresult (:2
-	crc_stats (
-schema (4
-stats (2%.CMsgClientGetUserStatsResponse.StatsN
-achievement_blocks (22.CMsgClientGetUserStatsResponse.Achievement_Blocks,
-Stats
-stat_id (
-
-stat_value (A
-Achievement_Blocks
-achievement_id (
-unlock_time ("ö
- CMsgClientStoreUserStatsResponse
-game_id (
-eresult (:2
-	crc_stats (Z
-stats_failed_validation (29.CMsgClientStoreUserStatsResponse.Stats_Failed_Validation
-stats_out_of_date (G
-Stats_Failed_Validation
-stat_id (
-reverted_stat_value ("Ë
-CMsgClientStoreUserStats2
-game_id (
-settor_steam_id (
-settee_steam_id (
-	crc_stats (
-explicit_reset (/
-stats (2 .CMsgClientStoreUserStats2.Stats,
-Stats
-stat_id (
-
-stat_value ("¬
-CMsgClientStatsUpdated
-steam_id (
-game_id (
-	crc_stats (<
-updated_stats (2%.CMsgClientStatsUpdated.Updated_Stats4
-Updated_Stats
-stat_id (
-
-stat_value ("º
-CMsgClientStoreUserStats
-game_id (
-explicit_reset (@
-stats_to_store (2(.CMsgClientStoreUserStats.Stats_To_Store5
-Stats_To_Store
-stat_id (
-
-stat_value ("
-CMsgClientGetClientDetails">
-$CMsgClientReportOverlayDetourFailure
-failure_string (	"å
-"CMsgClientGetClientDetailsResponse
-package_version (
-
-os (	
-machine_name (	
-	ip_public (	
-
-ip_private (	?
-games_running (2(.CMsgClientGetClientDetailsResponse.GameC
-Game
-appid (
-
-extra_info (	
-time_running_sec ("\
-CMsgClientGetClientAppList
-media (
-tools (
-games (
-	installed ("à
-"CMsgClientGetClientAppListResponse5
-apps (2'.CMsgClientGetClientAppListResponse.App
-bytes_available (ë
-App
-appid (
-category (	
-favorite (
-	installed (
-auto_update (
-bytes_downloaded (
-bytes_needed (
-bytes_download_rate (9
-dlcs	 (2+.CMsgClientGetClientAppListResponse.App.DLC'
-DLC
-appid (
-	installed ("+
-CMsgClientInstallClientApp
-appid ("4
-"CMsgClientInstallClientAppResponse
-result ("-
-CMsgClientUninstallClientApp
-appid ("6
-$CMsgClientUninstallClientAppResponse
-result ("B
-!CMsgClientSetClientAppUpdateState
-appid (
-update (";
-)CMsgClientSetClientAppUpdateStateResponse
-result ("‡
-CMsgClientUFSUploadFileRequest
-app_id (
-	file_size (
-raw_file_size (
-sha_file (
-
-time_stamp (
-	file_name (	$
-platforms_to_sync_deprecated (%
-platforms_to_sync (:
-4294967295"G
-CMsgClientUFSUploadFileResponse
-eresult (:2
-sha_file ("L
-CMsgClientUFSFileChunk
-sha_file (
-
-file_start (
-data (" 
-CMsgClientUFSTransferHeartbeat"G
-CMsgClientUFSUploadFileFinished
-eresult (:2
-sha_file ("_
-CMsgClientUFSDeleteFileRequest
-app_id (
-	file_name (	
-is_explicit_delete ("H
-CMsgClientUFSDeleteFileResponse
-eresult (:2
-	file_name (	"7
-CMsgClientUFSGetFileListForApp
-apps_to_query ("Ö
-&CMsgClientUFSGetFileListForAppResponse;
-files (2,.CMsgClientUFSGetFileListForAppResponse.Fileù
-File
-app_id (
-	file_name (	
-sha_file (
-
-time_stamp (
-raw_file_size (
-is_explicit_delete (
-platforms_to_sync ("A
-CMsgClientUFSDownloadRequest
-app_id (
-	file_name (	"Ø
-CMsgClientUFSDownloadResponse
-eresult (:2
-app_id (
-	file_size (
-raw_file_size (
-sha_file (
-
-time_stamp (
-is_explicit_delete ("]
-CMsgClientUFSLoginRequest
-protocol_version (
-am_session_token (
-apps ("0
-CMsgClientUFSLoginResponse
-eresult (:2"G
-#CMsgClientRequestEncryptedAppTicket
-app_id (
-userdata ("Ñ
-+CMsgClientRequestEncryptedAppTicketResponse
-app_id (
-eresult (:21
-encrypted_app_ticket (2.EncryptedAppTicket"S
-CMsgClientWalletInfoUpdate
-
-has_wallet (
-balance (
-currency ("M
-CMsgClientAppInfoUpdate
-last_changenumber (
-send_changelist ("d
-CMsgClientAppInfoChanges
-current_change_number (
-force_full_update (
-appIDs ("´
-CMsgClientAppInfoRequest+
-apps (2.CMsgClientAppInfoRequest.App
-supports_batches (:falseA
-App
-app_id (
-section_flags (
-section_CRC ("ë
-CMsgClientAppInfoResponse,
-apps (2.CMsgClientAppInfoResponse.App
-apps_unknown (
-apps_pending (ô
-App
-app_id (
-change_number (8
-sections (2&.CMsgClientAppInfoResponse.App.Section1
-Section
-
-section_id (
-
-section_kv ("K
-CMsgClientPackageInfoRequest
-package_ids (
-meta_data_only ("‡
-CMsgClientPackageInfoResponse8
-packages (2&.CMsgClientPackageInfoResponse.Package
-packages_unknown (
-packages_pending (Q
-Package
-
-package_id (
-change_number (
-sha (
-buffer ("D
-CMsgClientUFSGetUGCDetails&
-hcontent (:18446744073709551615"Ä
-"CMsgClientUFSGetUGCDetailsResponse
-eresult (:2
-url (	
-app_id (
-filename (	
-steamid_creator ("C
-CMsgClientUFSGetSingleFileInfo
-app_id (
-	file_name (	"∏
-&CMsgClientUFSGetSingleFileInfoResponse
-eresult (:2
-app_id (
-	file_name (	
-sha_file (
-
-time_stamp (
-raw_file_size (
-is_explicit_delete (";
-CMsgClientUFSShareFile
-app_id (
-	file_name (	"\
-CMsgClientUFSShareFileResponse
-eresult (:2&
-hcontent (:18446744073709551615"=
-CMsgClientNewLoginKey
-	unique_id (
-	login_key (	"2
-CMsgClientNewLoginKeyAccepted
-	unique_id ("3
-CMsgClientAMGetClanOfficers
-steamid_clan ("f
-#CMsgClientAMGetClanOfficersResponse
-eresult (:2
-steamid_clan (
-officer_count ("ê
-!CMsgClientAMGetPersonaNameHistory
-id_count (:
-Ids (2-.CMsgClientAMGetPersonaNameHistory.IdInstance
-
-IdInstance
-steamid ("√
-)CMsgClientAMGetPersonaNameHistoryResponseO
-	responses (2<.CMsgClientAMGetPersonaNameHistoryResponse.NameTableInstanceƒ
-NameTableInstance
-eresult (:2
-steamid (X
-names (2I.CMsgClientAMGetPersonaNameHistoryResponse.NameTableInstance.NameInstance0
-NameInstance
-
-name_since (
-name (	"E
-CMsgClientDeregisterWithServer
-eservertype (
-app_id ("é
-CMsgClientClanState
-steamid_clan (
-m_unStatusFlags (
-clan_account_flags (0
-	name_info (2.CMsgClientClanState.NameInfo4
-user_counts (2.CMsgClientClanState.UserCounts*
-events (2.CMsgClientClanState.Event1
-announcements (2.CMsgClientClanState.Event1
-NameInfo
-	clan_name (	
-
-sha_avatar (P
-
-UserCounts
-members (
-online (
-chatting (
-in_game (`
-Event
-gid (
-
-event_time (
-headline (	
-game_id (
-just_posted ("P
-CMsgClientFriendMsg
-steamid (
-chat_entry_type (
-message ("{
-CMsgClientFriendMsgIncoming
-steamid_from (
-chat_entry_type (
-from_limited_account (
-message ("R
-CMsgClientAddFriend
-steamid_to_add (#
-accountname_or_email_to_add (	"e
-CMsgClientAddFriendResponse
-eresult (:2
-steam_id_added (
-persona_name_added (	"*
-CMsgClientRemoveFriend
-friendid ("6
-CMsgClientHideFriend
-friendid (
-hide ("∑
-CMsgClientUCMAddScreenshot
-appid (
-filename (	
-	thumbname (	
-rtime32_created (
-width (
-height (
-permissions (
-caption (	
-shortcut_name	 (	,
-tag
- (2.CMsgClientUCMAddScreenshot.Tag
-tagged_steamid (*
-Tag
-tag_name (	
-	tag_value (	"d
-"CMsgClientUCMAddScreenshotResponse
-eresult (:2*
-screenshotid (:18446744073709551615"K
-CMsgClientUCMDeleteScreenshot*
-screenshotid (:18446744073709551615";
-%CMsgClientUCMDeleteScreenshotResponse
-eresult (:2"
-CMsgClientScreenshotsChanged"w
-CMsgClientUpdateUserGameInfo
-steamid_idgs (
-gameid (
-game_ip (
-	game_port (
-token ("S
-CMsgClientRichPresenceUpload
-rich_presence_kv (
-steamid_broadcast ("8
-CMsgClientRichPresenceRequest
-steamid_request ("ù
-CMsgClientRichPresenceInfo?
-rich_presence (2(.CMsgClientRichPresenceInfo.RichPresence>
-RichPresence
-steamid_user (
-rich_presence_kv (".
-CMsgClientCheckFileSignature
-app_id ("˜
-$CMsgClientCheckFileSignatureResponse
-app_id (
-pid (
-eresult (
-filename (	
-esignatureresult (
-sha_file (
-signatureheader (
-filesize (
-getlasterror	 ("
-evalvesignaturecheckdetail
- ("P
-CMsgClientReadMachineAuth
-filename (	
-offset (
-	cubtoread ("Œ
-!CMsgClientReadMachineAuthResponse
-filename (	
-eresult (
-filesize (
-sha_file (
-getlasterror (
-offset (
-cubread (
-
-bytes_read (
-filename_sentry	 (	"Ω
-CMsgClientUpdateMachineAuth
-filename (	
-offset (
-
-cubtowrite (
-bytes (
-otp_type (
-otp_identifier (	
-otp_sharedsecret (
-otp_timedrift ("·
-#CMsgClientUpdateMachineAuthResponse
-filename (	
-eresult (
-filesize (
-sha_file (
-getlasterror (
-offset (
-cubwrote (
-otp_type (
-	otp_value	 (
-otp_identifier
- (	"Í
-CMsgClientRequestMachineAuth
-filename (	
-eresult_sentryfile (
-filesize (
-sha_sentryfile (
-lock_account_action (
-otp_type (
-otp_identifier (	
-otp_sharedsecret	 (
-	otp_value
- ("7
-$CMsgClientRequestMachineAuthResponse
-eresult ("A
-CMsgClientCreateFriendGroup
-steamid (
-	groupname (	"G
-#CMsgClientCreateFriendGroupResponse
-eresult (
-groupid ("?
-CMsgClientDeleteFriendGroup
-steamid (
-groupid ("6
-#CMsgClientDeleteFriendGroupResponse
-eresult ("A
-CMsgClientRenameFriendGroup
-groupid (
-	groupname (	"6
-#CMsgClientRenameFriendGroupResponse
-eresult ("B
-CMsgClientAddFriendToGroup
-groupid (
-steamiduser ("5
-"CMsgClientAddFriendToGroupResponse
-eresult ("G
-CMsgClientRemoveFriendFromGroup
-groupid (
-steamiduser (":
-'CMsgClientRemoveFriendFromGroupResponse
-eresult ("$
-CMsgClientRegisterKey
-key (	"p
-CMsgClientPurchaseResponse
-eresult (:2
-purchase_result_details (
-purchase_receipt_info ("≈
-CMsgClientActivateOEMLicense
-bios_manufacturer (	
-bios_serialnumber (	
-license_file (
-mainboard_manufacturer (	
-mainboard_product (	
-mainboard_serialnumber (	"K
-CMsgClientPurchaseWithMachineID
-
-package_id (
-machine_info ("g
- CMsgTrading_InitiateTradeRequest
-trade_request_id (
-other_steamid (
-
-other_name (	"f
-!CMsgTrading_InitiateTradeResponse
-response (
-trade_request_id (
-other_steamid ("7
-CMsgTrading_CancelTradeRequest
-other_steamid ("1
-CMsgTrading_StartSession
-other_steamid ("Q
-"CMsgClientMDSInitDepotBuildRequest
-depot_id (
-encrypted_aes_key ("â
-#CMsgClientMDSInitDepotBuildResponse
-eresult (:2
-default_chunk_size (
-base_manifest (
-encrypted_depot_key (":
-CMsgClientMDSLoginRequest
-encrypted_session_key ("0
-CMsgClientMDSLoginResponse
-eresult (:2"”
-CMsgClientMDSUploadDepotChunks
-depot_id (?
-chunks (2/.CMsgClientMDSUploadDepotChunks.ChunkUploadData^
-ChunkUploadData
-sha (
-rolling_crc (
-original_chunk_size (
-data ("<
-&CMsgClientMDSUploadDepotChunksResponse
-eresult (:2"F
-&CMsgClientMDSTransmitManifestDataChunk
-offset (
-data ("£
-"CMsgClientMDSUploadManifestRequest
-depot_id ( 
-manifest_size_compressed ("
-manifest_size_uncompressed (
-make_public (
-beta_key (	"∂
-#CMsgClientMDSUploadManifestResponse
-eresult (:2
-new_manifest (
-unique_chunks (
-missing_chunks (#
-bitstring_size_uncompressed (
-	bitstring ("F
-CMsgClientMDSGetDepotManifest
-depot_id (
-manifest_id ("Å
-%CMsgClientMDSGetDepotManifestResponse
-eresult (:2"
-manifest_size_uncompressed ( 
-manifest_size_compressed ("B
-"CMsgClientMDSGetDepotManifestChunk
-offset (
-data ("U
-CMsgClientEmailChange
-password (	
-email (	
-code (	
-final ("3
-CMsgClientEmailChangeResponse
-eresult (:2">
-CMsgClientGetCDNAuthToken
-app_id (
-	host_name (	"_
-!CMsgClientGetCDNAuthTokenResponse
-eresult (:2
-token (	
-expiration_time ("∏
-CMsgDownloadRateStatistics
-cell_id (4
-stats (2%.CMsgDownloadRateStatistics.StatsInfoS
-	StatsInfo
-source_type (
-	source_id (
-seconds (
-bytes ("H
-CMsgClientRequestAccountData
-account_or_email (	
-action ("◊
-$CMsgClientRequestAccountDataResponse
-action (
-eresult (
-account_name (	
-
-ct_matches ( 
-account_name_suggestion1 (	 
-account_name_suggestion2 (	 
-account_name_suggestion3 (	"ô
-CMsgClientUGSGetGlobalStats
-gameid (
-history_days_requested (
-time_last_requested (
-first_day_cached (
-days_cached ("ï
-#CMsgClientUGSGetGlobalStatsResponse
-eresult (:2
-	timestamp (
-day_current (6
-days (2(.CMsgClientUGSGetGlobalStatsResponse.Dayz
-Day
-day_id (<
-stats (2-.CMsgClientUGSGetGlobalStatsResponse.Day.Stat%
-Stat
-stat_id (
-data ("∆
-CMsgGameServerData
-steam_id_gs (
-
-ip (
-
-query_port (
-	game_port (
-sourcetv_port (
-app_id (
-gamedir (	
-version (	
-product	 (	
-region
- (	+
-players (2.CMsgGameServerData.Player
-max_players (
-	bot_count (
-password (
-secure (
-	dedicated (
-
-os (	
-	game_data (	
-game_data_version (
-	game_type (	
-map (	
-Player
-steam_id ("H
-CMsgGameServerRemove
-steam_id (
-
-ip (
-
-query_port ("Ç
-CMsgClientGMSServerQuery
-app_id (
-geo_location_ip (
-region_code (
-filter_text (	
-max_servers ("•
- CMsgGMSClientServerQueryResponse9
-servers (2(.CMsgGMSClientServerQueryResponse.ServerF
-Server
-	server_ip (
-server_port (
-auth_players ("2
-CMsgClientRedeemGuestPass
-guest_pass_id ("c
-!CMsgClientRedeemGuestPassResponse
-eresult (:2
-
-package_id (
-must_own_appid (BHÄ 

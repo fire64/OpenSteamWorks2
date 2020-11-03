@@ -1,15 +1,15 @@
 class IClientGameServerStatsMap
 {
-	virtual uint64 RequestUserStats( CSteamID, CGameID ) = 0;
-	virtual uint8 GetUserStat( CSteamID, CGameID, const char *, int32 * ) = 0;
-	virtual uint8 GetUserStat( CSteamID, CGameID, const char *, float * ) = 0;
-	virtual uint8 GetUserAchievement( CSteamID, CGameID, const char *, bool *, uint32 * ) = 0;
-	virtual uint8 SetUserStat( CSteamID, CGameID, const char *, int32 ) = 0;
-	virtual uint8 SetUserStat( CSteamID, CGameID, const char *, float ) = 0;
-	virtual uint8 UpdateUserAvgRateStat( CSteamID, CGameID, const char *, float, double ) = 0;
-	virtual uint8 SetUserAchievement( CSteamID, CGameID, const char * ) = 0;
-	virtual uint8 ClearUserAchievement( CSteamID, CGameID, const char * ) = 0;
-	virtual uint64 StoreUserStats( CSteamID, CGameID ) = 0;
+	virtual void * RequestUserStats( CSteamID, CGameID ) = 0;
+	virtual void * GetUserStat( CSteamID, CGameID, char const*, int32 * ) = 0;
+	virtual void * GetUserStat( CSteamID, CGameID, char const*, float * ) = 0;
+	virtual void * GetUserAchievement( CSteamID, CGameID, char const*, bool *, uint32 * ) = 0;
+	virtual void * SetUserStat( CSteamID, CGameID, char const*, int32 ) = 0;
+	virtual void * SetUserStat( CSteamID, CGameID, char const*, float ) = 0;
+	virtual void * UpdateUserAvgRateStat( CSteamID, CGameID, char const*, float, double ) = 0;
+	virtual void * SetUserAchievement( CSteamID, CGameID, char const* ) = 0;
+	virtual void * ClearUserAchievement( CSteamID, CGameID, char const* ) = 0;
+	virtual void * StoreUserStats( CSteamID, CGameID ) = 0;
 	virtual void SetMaxStatsLoaded( uint32 ) = 0;
 };
 
