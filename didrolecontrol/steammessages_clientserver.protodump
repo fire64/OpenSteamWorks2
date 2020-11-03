@@ -1110,7 +1110,41 @@ ct_matches (
 stats (2-.CMsgClientUGSGetGlobalStatsResponse.Day.Stat%
 Stat
 stat_id (
-data ("‚
+data ("Æ
+CMsgGameServerData
+steam_id_gs (
+
+ip (
+
+query_port (
+	game_port (
+sourcetv_port (
+app_id (
+gamedir (	
+version (	
+product	 (	
+region
+ (	+
+players (2.CMsgGameServerData.Player
+max_players (
+	bot_count (
+password (
+secure (
+	dedicated (
+
+os (	
+	game_data (	
+game_data_version (
+	game_type (	
+map (	
+Player
+steam_id ("H
+CMsgGameServerRemove
+steam_id (
+
+ip (
+
+query_port ("‚
 CMsgClientGMSServerQuery
 app_id (
 geo_location_ip (

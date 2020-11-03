@@ -5,4 +5,5 @@ enum ERemoteStorageFileRoot
 	k_ERemoteStorageFileRootGameInstall,	// GameInstall
 	k_ERemoteStorageFileRootWinMyDocuments,	// WinMyDocuments
 	k_ERemoteStorageFileRootWinAppDataLocal,	// WinAppDataLocal
+	k_ERemoteStorageFileRootWinAppDataRoaming,	// WinAppDataRoaming
 }
