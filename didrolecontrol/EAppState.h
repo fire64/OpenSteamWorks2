@@ -10,6 +10,7 @@ enum EAppState
 	k_EAppStateFilesCorrupt = 128,	// Files Corrupt
 	k_EAppStateAppRunning = 64,	// App Running
 	k_EAppStateUpdateRunning = 256,	// Update Running
+	k_EAppStateUpdateStopping = 262144,	// Update Stopping
 	k_EAppStateUpdatePaused = 512,	// Update Paused
 	k_EAppStateUpdateStarted = 1024,	// Update Started
 	k_EAppStateReconfiguring = 4096,	// Reconfiguring

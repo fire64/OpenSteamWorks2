@@ -5,7 +5,7 @@ class IClientScreenshotsMap
 	virtual uint32 WriteScreenshot( CGameID, void *, uint32, int32, int32 ) = 0;
 	virtual uint32 AddScreenshotToLibrary( CGameID, const char *, const char *, int32, int32 ) = 0;
 	virtual void TriggerScreenshot( CGameID ) = 0;
-	virtual void HookScreenshots( uint32 ) = 0;
+	virtual void HookScreenshots( uint32, bool ) = 0;
 	virtual void RequestScreenshotFromGame( uint32 ) = 0;
 	virtual uint8 SetLocation( CGameID, uint32, const char * ) = 0;
 	virtual uint8 TagUser( CGameID, uint32, CSteamID ) = 0;

@@ -188,13 +188,13 @@ ID 2001, Size 16, Sent in CAPIJobGetNewSession::BYieldingRunAPIJob
 ID 2002, Size 12, Sent in CAPIJobEndSession::BYieldingRunAPIJob 
 ID 2101, Size 20, Sent in CClientHTTPWaitRequestJob::BYieldingRunAPIJob 
 ID 2201, Size 20, Sent in CAPIJobUploadScreenshots::PostProgress 
-ID 2202, Size 24, Sent in CUserScreenshots::AddScreenshotToLibrary CUserScreenshots::RecoverScreenshot CUserScreenshots::WriteScreenshot 
+ID 2202, Size 24, Sent in CClientJobWriteScreenshot::BYieldingRunClientJob CUserScreenshots::AddScreenshotToLibrary CUserScreenshots::RecoverScreenshot 
 ID 2203, Size 600, Sent in CAPIJobUploadScreenshots::BYieldingRunAPIJob 
 ID 2204, Size 8, Sent in CAPIJobDeleteScreenshots::BYieldingRunAPIJob CAPIJobUploadScreenshots::BYieldingRunAPIJob 
 ID 2205, Size 16, Sent in CAPIJobDeleteScreenshots::BYieldingRunAPIJob 
 ID 2206, Size 8, Sent in CUserScreenshots::TriggerScreenshot 
-ID 2207, Size 4, Sent in CUserScreenshots::HookScreenshots 
-ID 2301, Size 4, Sent in CUserScreenshots::AddScreenshotToLibrary CUserScreenshots::WriteScreenshot 
+ID 2207, Size 8, Sent in CUserScreenshots::HookScreenshots 
+ID 2301, Size 8, Sent in CClientJobWriteScreenshot::BYieldingRunClientJob CUserScreenshots::AddScreenshotToLibrary 
 ID 2302, Size 1, Sent in CUserScreenshots::RequestScreenshotFromGame 
 ID 2401, Size 4, Sent in CClientAudio::PlayAudio 
 ID 2402, Size 4, Sent in CClientAudio::StopAudio 
