@@ -151,8 +151,9 @@ ID 1106, Size 28, Sent in CAPIJobUploadLeaderboardScore::BYieldingRunAPIJob
 ID 1107, Size 8, Sent in CAPIJobGetNumberOfCurrentPlayers::BYieldingRunAPIJob 
 ID 1108, Size 8, Sent in CUserStats::AgeOutStats 
 ID 1109, Size 144, Sent in CUserStats::GetOrFetchAchievementIcon CUserStats::OnAchievementIconLoaded 
-ID 1110, Size 9, Sent in CAPIJobRequestGlobalAchievementPercentages::BYieldingRunAPIJob CUserStats::RequestGlobalAchievementPercentages 
+ID 1110, Size 12, Sent in CAPIJobRequestGlobalAchievementPercentages::BYieldingRunAPIJob 
 ID 1111, Size 12, Sent in CAPIJobSetLeaderboardUGC::BYieldingRunAPIJob 
+ID 1112, Size 12, Sent in CAPIJobRequestGlobalStats::BYieldingRunAPIJob 
 ID 1201, Size 20, Sent in CClientNetworkingAPI::OnSocketConnectionStateUpdated 
 ID 1202, Size 8, Sent in CP2PNetworkingSession::P2PConnectionInfoArrived 
 ID 1203, Size 9, Sent in CP2PNetworkingSession::P2PConnectFailed 

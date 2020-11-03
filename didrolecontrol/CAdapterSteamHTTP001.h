@@ -13,5 +13,6 @@ class CAdapterSteamHTTP001
 	virtual unknown_ret GetHTTPResponseBodySize( uint32, uint32 * ) = 0;
 	virtual unknown_ret GetHTTPResponseBodyData( uint32, uint8 *, uint32 ) = 0;
 	virtual unknown_ret ReleaseHTTPRequest( uint32 ) = 0;
+	virtual unknown_ret GetHTTPDownloadProgressPct( uint32, float * ) = 0;
 };
 

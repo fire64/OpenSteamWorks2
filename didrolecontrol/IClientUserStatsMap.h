@@ -38,9 +38,14 @@ class IClientUserStatsMap
 	virtual uint64 GetNumberOfCurrentPlayers() = 0;
 	virtual uint32 GetNumAchievedAchievements( CGameID ) = 0;
 	virtual const char * GetLastAchievementUnlocked( CGameID ) = 0;
-	virtual void RequestGlobalAchievementPercentages( CGameID ) = 0;
+	virtual uint64 RequestGlobalAchievementPercentages( CGameID ) = 0;
 	virtual uint32 GetMostAchievedAchievementInfo( CGameID, char *, uint32, float *, bool * ) = 0;
 	virtual uint32 GetNextMostAchievedAchievementInfo( CGameID, int32, char *, uint32, float *, bool * ) = 0;
 	virtual uint8 GetAchievementAchievedPercent( CGameID, const char *, float * ) = 0;
+	virtual uint64 RequestGlobalStats( CGameID, int32 ) = 0;
+	virtual uint8 GetGlobalStat( CGameID, const char *, int64 * ) = 0;
+	virtual uint8 GetGlobalStat( CGameID, const char *, double * ) = 0;
+	virtual uint32 GetGlobalStatHistory( CGameID, const char *, int64 *, uint32 ) = 0;
+	virtual uint32 GetGlobalStatHistory( CGameID, const char *, double *, uint32 ) = 0;
 };
 

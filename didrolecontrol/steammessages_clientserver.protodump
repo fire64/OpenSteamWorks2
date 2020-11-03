@@ -695,15 +695,18 @@ has_wallet (
 CMsgClientAppInfoChanges
 current_change_number (
 force_full_update (
-appIDs ("Š
+appIDs ("«
 CMsgClientAppInfoRequest+
-apps (2.CMsgClientAppInfoRequest.AppA
+apps (2.CMsgClientAppInfoRequest.App
+supports_batches (:falseA
 App
 app_id (
 section_flags (
-section_CRC ("å
+section_CRC ("‘
 CMsgClientAppInfoResponse,
-apps (2.CMsgClientAppInfoResponse.App™
+apps (2.CMsgClientAppInfoResponse.App
+apps_unknown (
+apps_pending (™
 App
 app_id (
 change_number (8
@@ -954,4 +957,21 @@ other_name (	"f
 code (	
 final ("3
 CMsgClientEmailChangeResponse
-eresult (:2BH€ 
+eresult (:2"™
+CMsgClientUGSGetGlobalStats
+gameid (
+history_days_requested (
+time_last_requested (
+first_day_cached (
+days_cached ("•
+#CMsgClientUGSGetGlobalStatsResponse
+eresult (:2
+	timestamp (
+day_current (6
+days (2(.CMsgClientUGSGetGlobalStatsResponse.Dayz
+Day
+day_id (<
+stats (2-.CMsgClientUGSGetGlobalStatsResponse.Day.Stat%
+Stat
+stat_id (
+data (BH€ 
