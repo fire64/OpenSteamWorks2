@@ -23,5 +23,6 @@ class CAdapterSteamClient010
 	virtual unknown_ret GetIPCCallCount() = 0;
 	virtual unknown_ret SetWarningMessageHook( void ( * )( int32, const char * ) ) = 0;
 	virtual unknown_ret BShutdownIfAllPipesClosed() = 0;
+	virtual unknown_ret GetISteamHTTP( int32, int32, const char * ) = 0;
 };
 

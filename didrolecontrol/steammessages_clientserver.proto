@@ -101,6 +101,7 @@ message CMsgClientLogonResponse
 	optional fixed32 rtime32_server_time = 5;
 	optional uint32 account_flags = 6;
 	optional string email_domain = 8;
+	optional int32 eresult_extended = 10;
 	optional fixed64 client_supplied_steamid = 20;
 }
 
@@ -1514,5 +1515,26 @@ message CMsgClientUGSGetGlobalStatsResponse
 	optional fixed32 timestamp = 2;
 	optional int32 day_current = 3;
 	repeated .CMsgClientUGSGetGlobalStatsResponse.Day days = 4;
+}
+
+message CMsgClientGMSServerQuery
+{
+	optional uint32 app_id = 1;
+	optional uint32 geo_location_ip = 2;
+	optional uint32 region_code = 3;
+	optional string filter_text = 4;
+	optional uint32 max_servers = 5;
+}
+
+message CMsgGMSClientServerQueryResponse
+{
+	message Server
+	{
+		optional uint32 server_ip = 1;
+		optional uint32 server_port = 2;
+		optional uint32 auth_players = 3;
+	}
+
+	repeated .CMsgGMSClientServerQueryResponse.Server servers = 1;
 }
 

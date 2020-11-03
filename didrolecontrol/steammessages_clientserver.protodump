@@ -68,7 +68,7 @@ machine_id (
 	auth_codeT (	
 otp_typeU (
 	otp_valueV (
-otp_identifierW (	"ı
+otp_identifierW (	"è
 CMsgClientLogonResponse
 eresult (:2%
 out_of_game_heartbeat_seconds (!
@@ -76,7 +76,9 @@ machine_id (
 	public_ip (
 rtime32_server_time (
 account_flags (
-email_domain (	
+email_domain (	
+eresult_extended
+ (
 client_supplied_steamid ("
 CMsgClientLogOff")
 CMsgClientLoggedOff
@@ -974,4 +976,16 @@ other_name (	"f
 stats (2-.CMsgClientUGSGetGlobalStatsResponse.Day.Stat%
 Stat
 stat_id (
-data (BHÄ 
+data ("Ç
+CMsgClientGMSServerQuery
+app_id (
+geo_location_ip (
+region_code (
+filter_text (	
+max_servers ("•
+ CMsgGMSClientServerQueryResponse9
+servers (2(.CMsgGMSClientServerQueryResponse.ServerF
+Server
+	server_ip (
+server_port (
+auth_players (BHÄ 

@@ -64,4 +64,5 @@ enum EResult
 	k_EResultAccountLogonDeniedNoMailSent,	// Account Logon Denied no mail sent
 	k_EResultHardwareNotCapableOfIPT,	// Hardware not capable of IPT
 	k_EResultIPTInitError,	// IPT init error
+	k_EResultExpiredLoginAuthCode = 71,	// Expired Login Auth Code
 }

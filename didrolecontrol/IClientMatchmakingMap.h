@@ -40,5 +40,9 @@ class IClientMatchmakingMap
 	virtual uint8 SetLobbyOwner( CSteamID, CSteamID ) = 0;
 	virtual uint32 GetGMSServerCount() = 0;
 	virtual uint8 GetGMSServerAddress( int32, uint32 *, uint16 * ) = 0;
+	virtual uint64 BeginGMSQuery( uint32, int32, const char * ) = 0;
+	virtual uint32 PollGMSQuery( int64 ) = 0;
+	virtual uint32 GetGMSQueryResults( int64, IClientMatchmaking::GMSQueryResult_t *, int32 ) = 0;
+	virtual void ReleaseGMSQuery( int64 ) = 0;
 };
 
