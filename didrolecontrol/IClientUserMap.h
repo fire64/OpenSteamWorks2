@@ -25,7 +25,7 @@ class IClientUserMap
 	virtual uint32 InitiateGameConnectionOld( void *, int32, CSteamID, CGameID, uint32, uint16, bool, void *, int32 ) = 0;
 	virtual void TerminateGameConnection( uint32, uint16 ) = 0;
 	virtual void SetSelfAsPrimaryChatDestination() = 0;
-	virtual uint8 IsPrimaryChatDestination() = 0;
+	virtual unknown_ret IsPrimaryChatDestination() = 0;
 	virtual void RequestLegacyCDKey( uint32 ) = 0;
 	virtual uint8 SendGuestPassByEmail( const char *, uint64, bool ) = 0;
 	virtual uint8 SendGuestPassByAccountID( uint32, uint64, bool ) = 0;
