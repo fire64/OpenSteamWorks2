@@ -38,7 +38,7 @@ class IClientBillingMap
 	virtual uint8 GetReceiptCardInfo( uint32, int32 *, char *, char *, char *, char *, char * ) = 0;
 	virtual uint8 GetReceiptBillingAddress( uint32, char *, char *, char *, char *, char *, char *, char *, char *, char * ) = 0;
 	virtual uint32 GetReceiptLineItemCount( uint32 ) = 0;
-	virtual uint8 GetReceiptLineItemInfo( uint32, uint32, uint32 *, uint32 *, uint32 *, uint32 *, uint32 *, ECurrencyCode * ) = 0;
+	virtual uint8 GetReceiptLineItemInfo( uint32, uint32, uint32 *, uint32 *, uint32 *, uint32 *, uint32 *, ECurrencyCode *, uint32 *, char * ) = 0;
 	virtual void EnableTestLicense( uint32 ) = 0;
 	virtual void DisableTestLicense( uint32 ) = 0;
 	virtual uint8 ActivateOEMTicket( const char * ) = 0;
