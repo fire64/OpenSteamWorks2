@@ -25,5 +25,6 @@ class CAdapterSteam2Bridge
 	virtual unknown_ret GetAppOwnershipTicketData( uint32, void *, uint32 ) = 0;
 	virtual unknown_ret GetAppDecryptionKey( uint32, void *, uint32 ) = 0;
 	virtual unknown_ret GetPlatformName( bool * ) = 0;
+	virtual unknown_ret GetSteam2FullASTicket( uint8 *, int32 ) = 0;
 };
 

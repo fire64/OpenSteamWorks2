@@ -26,6 +26,8 @@ class IClientFriendsMap
 	virtual uint8 IsFriendGameOnConsole( CSteamID ) = 0;
 	virtual uint32 GetFriendRestrictions( CSteamID ) = 0;
 	virtual const char * GetFriendPersonaNameHistory( CSteamID, int32 ) = 0;
+	virtual uint64 RequestPersonaNameHistory( CSteamID ) = 0;
+	virtual const char * GetFriendPersonaNameHistoryAndDate( CSteamID, int32, uint32 * ) = 0;
 	virtual uint8 AddFriend( CSteamID ) = 0;
 	virtual uint8 RemoveFriend( CSteamID ) = 0;
 	virtual uint8 HasFriend( CSteamID, int32 ) = 0;
@@ -34,6 +36,20 @@ class IClientFriendsMap
 	virtual uint8 RequestUserInformation( CSteamID, bool ) = 0;
 	virtual uint8 SetIgnoreFriend( CSteamID, bool ) = 0;
 	virtual uint8 ReportChatDeclined( CSteamID ) = 0;
+	virtual uint8 CreateFriendGroup( const char * ) = 0;
+	virtual uint8 DeleteFriendGroup( int16 ) = 0;
+	virtual uint8 RenameFriendGroup( const char *, int16 ) = 0;
+	virtual uint8 AddFriendToGroup( CSteamID, int16 ) = 0;
+	virtual uint8 RemoveFriendFromGroup( CSteamID, int16 ) = 0;
+	virtual uint16 GetFriendGroupCount() = 0;
+	virtual uint16 GetFriendGroupIDByIndex( int16 ) = 0;
+	virtual const char * GetFriendGroupName( int16 ) = 0;
+	virtual uint16 GetFriendGroupMembershipCount( int16 ) = 0;
+	virtual CSteamID GetFirstFriendGroupMember( int16 ) = 0;
+	virtual CSteamID GetNextFriendGroupMember( int16 ) = 0;
+	virtual uint16 GetGroupFriendMembershipCount( CSteamID ) = 0;
+	virtual uint16 GetFirstGroupFriendMember( CSteamID ) = 0;
+	virtual uint16 GetNextGroupFriendMember( CSteamID ) = 0;
 	virtual uint32 GetChatMessage( CSteamID, int32, void *, int32, EChatEntryType *, uint64 * ) = 0;
 	virtual uint8 SendMsgToFriend( CSteamID, EChatEntryType, const void *, int32 ) = 0;
 	virtual void ClearChatHistory( CSteamID ) = 0;
@@ -57,12 +73,12 @@ class IClientFriendsMap
 	virtual CSteamID GetCoplayFriend( int32 ) = 0;
 	virtual uint32 GetFriendCoplayTime( CSteamID ) = 0;
 	virtual uint32 GetFriendCoplayGame( CSteamID ) = 0;
-	virtual uint8 SetRichPresence( const char *, const char * ) = 0;
-	virtual void ClearRichPresence() = 0;
-	virtual const char * GetFriendRichPresence( CSteamID, const char * ) = 0;
-	virtual uint32 GetFriendRichPresenceKeyCount( CSteamID ) = 0;
-	virtual const char * GetFriendRichPresenceKeyByIndex( CSteamID, int32 ) = 0;
-	virtual void RequestFriendRichPresence( CSteamID ) = 0;
+	virtual uint8 SetRichPresence( uint32, const char *, const char * ) = 0;
+	virtual void ClearRichPresence( uint32 ) = 0;
+	virtual const char * GetFriendRichPresence( uint32, CSteamID, const char * ) = 0;
+	virtual uint32 GetFriendRichPresenceKeyCount( uint32, CSteamID ) = 0;
+	virtual const char * GetFriendRichPresenceKeyByIndex( uint32, CSteamID, int32 ) = 0;
+	virtual void RequestFriendRichPresence( uint32, CSteamID ) = 0;
 	virtual uint8 JoinChatRoom( CSteamID ) = 0;
 	virtual void LeaveChatRoom( CSteamID ) = 0;
 	virtual uint8 InviteUserToChatRoom( CSteamID, CSteamID ) = 0;
@@ -177,5 +193,8 @@ class IClientFriendsMap
 	virtual uint64 RequestTrade( CSteamID ) = 0;
 	virtual void TradeResponse( uint32, bool ) = 0;
 	virtual void CancelTradeRequest( CSteamID ) = 0;
+	virtual uint8 HideFriend( CSteamID, bool ) = 0;
+	virtual const char * GetFriendFacebookName( CSteamID ) = 0;
+	virtual uint64 GetFriendFacebookID( CSteamID ) = 0;
 };
 

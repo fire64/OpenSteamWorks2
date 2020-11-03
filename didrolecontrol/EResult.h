@@ -52,9 +52,9 @@ enum EResult
 	k_EResultNotEnoughFreeDiskSpace,	// Not enough free disk space
 	k_EResultRemoteCallFailed,	// Remote call failed
 	k_EResultPasswordIsNotSet,	// Password is not set
-	k_EResultPSNAccountIsNotLinked,	// PSN Account is not linked
+	k_EResultExternalAccountIsNotLinkedToASteamAccount,	// External Account is not linked to a Steam account
 	k_EResultPSNTicketIsInvalid,	// PSN Ticket is invalid
-	k_EResultPSNAccountLinkedToAnotherAccount,	// PSN Account linked to another account
+	k_EResultExternalAccountLinkedToAnotherSteamAccount,	// External Account linked to another Steam account
 	k_EResultRemoteFileConflict,	// Remote File Conflict
 	k_EResultIllegalPassword,	// Illegal password
 	k_EResultSameAsPreviousValue,	// Same as previous value
@@ -64,5 +64,7 @@ enum EResult
 	k_EResultAccountLogonDeniedNoMailSent,	// Account Logon Denied no mail sent
 	k_EResultHardwareNotCapableOfIPT,	// Hardware not capable of IPT
 	k_EResultIPTInitError,	// IPT init error
-	k_EResultExpiredLoginAuthCode = 71,	// Expired Login Auth Code
+	k_EResultOperationFailedDueToParentalControlRestrictionsForCurrentUser,	// Operation failed due to parental control restrictions for current user
+	k_EResultFacebookQueryReturnedAnError,	// Facebook query returned an error
+	k_EResultExpiredLoginAuthCode,	// Expired Login Auth Code
 }

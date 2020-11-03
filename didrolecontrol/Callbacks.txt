@@ -1,9 +1,8 @@
 In CClientJobSetIgnoreFriend::BYieldingRunAPIJob callback size missmatch ! CallbackID 334, size 24, expected size 20
 In CUserFriends::NotifyLobbyJoinRequested callback size missmatch ! CallbackID 333, size 16, expected size 20
 ID 101, Size 1, Sent in CCMInterface::RecvMsgClientLogOnResponse 
-ID 102, Size 4, Sent in CCMInterface::AdjustConnectionPriority CCMInterface::BYieldingTryCMConnection CCMInterface::ConnectFailed CCMInterface::ConnectionDisconnected CCMInterface::RaiseConnectionPriority CCMInterface::ScheduleImmediateReconnect 
+ID 102, Size 4, Sent in CCMInterface::AdjustConnectionPriority CCMInterface::BYieldingTryCMConnection CCMInterface::Connect CCMInterface::ConnectFailed CCMInterface::ConnectionDisconnected CCMInterface::RaiseConnectionPriority CCMInterface::ScheduleImmediateReconnect 
 ID 103, Size 4, Sent in CCMInterface::ConnectionDisconnected 
-ID 106, Size 1, Sent in CUser::SetSteam2Ticket 
 ID 110, Size 12, Sent in CClientJobNewsItemUpdateMsg::BYieldingRunClientJob 
 ID 112, Size 32, Sent in CClientJobNewsItemUpdateMsg::BYieldingRunClientJob 
 ID 113, Size 16, Sent in CCMInterface::RecvPkt 
@@ -16,7 +15,7 @@ ID 121, Size 24, Sent in CClientJobAckGuestPassResponse::BYieldingRunClientJob C
 ID 122, Size 8, Sent in CClientJobRedeemGuestPassResponse::BYieldingRunClientJob CUser::RedeemGuestPass 
 ID 123, Size 12, Sent in CClientJobUpdateGuestPassesList::BYieldingRunClientJob 
 ID 124, Size 1, Sent in CUser::SetAccountCreationTime 
-ID 125, Size 1, Sent in CClientJobLicenseList::BYieldingRunClientJob 
+ID 125, Size 1, Sent in CUser::BUpdateLicenses 
 ID 126, Size 4, Sent in CCMInterface::RecvPkt 
 ID 127, Size 4, Sent in CCMInterface::RecvPkt 
 ID 130, Size 20, Sent in CUser::AddClientGame CUser::InternalRemoveClientGame 
@@ -46,6 +45,11 @@ ID 154, Size 4, Sent in CClientJobRequestEncryptedAppTicket::BYieldingRunAPIJob
 ID 155, Size 1, Sent in CAPIJobAuthorizeMicroTxn::BYieldingRunAPIJob CAPIJobRequestMicroTxnInfo::BYieldingRunAPIJob CUser::SetWalletInfo 
 ID 156, Size 4, Sent in CClientJobRequestMachineAuth::BYieldingRunAPIJob 
 ID 157, Size 4, Sent in CClientJobRequestMachineAuth::BYieldingRunAPIJob 
+ID 158, Size 8, Sent in CUser::GetOTPData 
+ID 159, Size 8, Sent in CClientJobRequestAccountData::BYieldingRunAPIJob 
+ID 160, Size 196, Sent in CClientJobRequestAccountData::BYieldingRunAPIJob 
+ID 161, Size 8, Sent in CClientJobRequestAccountData::BYieldingRunAPIJob 
+ID 162, Size 73, Sent in CUser::SetAccountNameForCachedCredentialLogin CUser::SetLoginInformation 
 ID 201, Size 8, Sent in CGSClientJobGSApprove::BYieldingRunClientJob 
 ID 202, Size 140, Sent in CGSClientJobGSDeny::BYieldingRunClientJob CGameServer::RunUserTimeoutCheck CGameServer::SendUserConnectAndAuthenticate 
 ID 203, Size 12, Sent in CGSClientJobGSKick::BYieldingRunClientJob CGameServer::_GSSendUserDisconnect 
@@ -89,7 +93,13 @@ ID 334, Size 24, Sent in CClientJobSetIgnoreFriend::BYieldingRunAPIJob CUserFrie
 ID 335, Size 16, Sent in CAPIJobRequestClanOfficerList::BYieldingRunAPIJob 
 ID 336, Size 12, Sent in CClientJobRichPresenceInfo::BYieldingRunClientJob 
 ID 337, Size 264, Sent in CUserFriends::NotifyRichPresenceJoinRequested 
+ID 338, Size 8, Sent in CAPIJobRequestPersonaNameHistory::BYieldingRunAPIJob 
 ID 340, Size 3, Sent in CUserFriends::NotifyUIOfMenuChange 
+ID 345, Size 8, Sent in CClientJobCreateFriendGroup::BYieldingRunAPIJob 
+ID 346, Size 4, Sent in CClientJobDeleteFriendGroup::BYieldingRunAPIJob 
+ID 347, Size 4, Sent in CClientJobRenameFriendGroup::BYieldingRunAPIJob 
+ID 348, Size 4, Sent in CClientJobAddFriendToGroup::BYieldingRunAPIJob 
+ID 349, Size 4, Sent in CClientJobRemoveFriendFromGroup::BYieldingRunAPIJob 
 ID 404, Size 12, Sent in CClientJobPurchaseResponse::BYieldingRunClientJob CClientJobPurchaseWithActivationCode::BYieldingRunAPIJob 
 ID 409, Size 4, Sent in CClientJobCancelLicenseResponse::BYieldingRunClientJob 
 ID 413, Size 20, Sent in CClientJobLookupActivationCode::BYieldingRunAPIJob 
@@ -97,16 +107,16 @@ ID 414, Size 16, Sent in CClientJobActivateOEMTicket::BYieldingRunAPIJob
 ID 501, Size 1, Sent in CUser::AddFavoriteGameInternal CUser::LoadFavoritesFromLocalVDF CUser::RemoveFavoriteGame 
 ID 502, Size 24, Sent in CUser::AddFavoriteGameInternal CUser::LoadFavoritesFromLocalVDF CUser::RemoveFavoriteGame 
 ID 503, Size 24, Sent in CClientJobChatInvite::BYieldingRunClientJob 
-ID 504, Size 20, Sent in CAPIJobCreateLobby::BYieldingRunAPIJob CAPIJobJoinLobby::BYieldingRunAPIJob CAPIJobMatchmakingCreateLobby::BYieldingRunAPIJob CAPIJobMatchmakingJoinLobby::BYieldingRunAPIJob CUserFriends::JoinChatRoom 
-ID 505, Size 20, Sent in CAPIJobCreateLobby::BYieldingRunAPIJob CAPIJobJoinLobby::BYieldingRunAPIJob CAPIJobMatchmakingCreateLobby::BYieldingRunAPIJob CAPIJobMatchmakingJoinLobby::BYieldingRunAPIJob CClientJobMatchmakingLobbyData::BYieldingRunClientJob CClientJobPersonaState::BYieldingRunClientJob CClientJobReceiveLobbyData::BYieldingRunClientJob CUser::RequestLobbyData CUserMatchmaking::RequestLobbyData CUserMatchmaking::SetLobbyMemberData 
+ID 504, Size 20, Sent in CAPIJobMatchmakingCreateLobby::BYieldingRunAPIJob CAPIJobMatchmakingJoinLobby::BYieldingRunAPIJob CUserFriends::JoinChatRoom 
+ID 505, Size 20, Sent in CAPIJobMatchmakingCreateLobby::BYieldingRunAPIJob CAPIJobMatchmakingJoinLobby::BYieldingRunAPIJob CClientJobMatchmakingLobbyData::BYieldingRunClientJob CClientJobPersonaState::BYieldingRunClientJob CUserMatchmaking::RequestLobbyData CUserMatchmaking::SetLobbyMemberData 
 ID 506, Size 28, Sent in CClientJobMatchmakingUserJoinedLobby::BYieldingRunClientJob CClientJobMatchmakingUserLeftLobby::BYieldingRunClientJob CUserFriends::UpdateChatMemberState 
 ID 507, Size 24, Sent in CClientJobChatMsg::BYieldingRunClientJob CUserFriends::SendChatMsg CUserMatchmaking::RecordLobbyChatMsg 
 ID 509, Size 24, Sent in CClientJobChatMsg::BYieldingRunClientJob CClientJobMatchmakingLobbyGameServerSet::BYieldingRunClientJob 
-ID 510, Size 4, Sent in CAPIJobMatchmakingRequestLobbyList::BYieldingRunAPIJob CAPIJobRequestLobbyList::BYieldingRunAPIJob 
+ID 510, Size 4, Sent in CAPIJobMatchmakingRequestLobbyList::BYieldingRunAPIJob 
 ID 511, Size 8, Sent in CClientJobChatRoomInfo::BYieldingRunClientJob 
 ID 512, Size 20, Sent in CUserFriends::OnFriendsSignOut CUserFriends::SetPersonaStateInternal CUserFriends::UpdateChatMemberState 
-ID 513, Size 12, Sent in CAPIJobCreateLobby::BYieldingRunAPIJob CAPIJobMatchmakingCreateLobby::BYieldingRunAPIJob 
-ID 514, Size 24, Sent in CAPIJobMatchmakingRequestFriendsLobbies::BYieldingRunAPIJob CClientJobGetFriendsLobbiesResponse::BYieldingRunClientJob CUser::RequestFriendsLobbies 
+ID 513, Size 12, Sent in CAPIJobMatchmakingCreateLobby::BYieldingRunAPIJob 
+ID 514, Size 24, Sent in CAPIJobMatchmakingRequestFriendsLobbies::BYieldingRunAPIJob 
 ID 601, Size 12, Sent in CClientJobCSApprove::BYieldingRunClientJob 
 ID 602, Size 16, Sent in CClientJobCSDeny::BYieldingRunClientJob 
 ID 701, Size 1, Sent in CClientJobAccountInfo::BYieldingRunClientJob 
@@ -130,18 +140,22 @@ ID 901, Size 4108, Sent in CClientJobSystemIM::BYieldingRunClientJob
 ID 902, Size 24, Sent in CClientJobReceiveGuestPassGiftTarget::BYieldingRunClientJob 
 ID 903, Size 2, Sent in CUser::NotifyPrimaryChatDestination 
 ID 904, Size 1, Sent in CCMInterface::ScheduledAttemptReconnect 
-ID 905, Size 4, Sent in CClientJobLicenseList::BYieldingRunClientJob 
+ID 905, Size 4, Sent in CUser::BUpdateLicenses 
 ID 906, Size 4, Sent in CClientJobGetClientAppList::BYieldingRunClientJob 
 ID 907, Size 16, Sent in CClientJobSetClientAppUpdateState::BYieldingRunClientJob 
 ID 908, Size 12, Sent in CClientJobInstallClientApp::BYieldingRunClientJob 
 ID 909, Size 12, Sent in CClientJobUninstallClientApp::BYieldingRunClientJob 
-ID 1001, Size 8, Sent in CClientJobRequestAppInfoUpdate::BYieldingRunAPIJob CUserAppInfo::RequestAppCallbacks CUserAppInfo::SendUserSpecificAppData 
+ID 1001, Size 8, Sent in CClientJobRequestAppInfoUpdate::BYieldingRunAPIJob CUserAppInfo::RequestAppCallbacks CUserAppInfo::UpdateUserConfigData 
 ID 1002, Size 1, Sent in CUserAppInfo::RequestAppCallbacks 
 ID 1003, Size 8, Sent in CUserAppInfo::OnJobAppInfoDone 
 ID 1004, Size 8, Sent in CUserAppInfo::NotifyAppEventTriggered 
 ID 1005, Size 4, Sent in CUserAppInfo::NotifyDlcInstalled 
 ID 1006, Size 16, Sent in CSteamClientApp::ModifyStateFlags 
+ID 1007, Size 32, Sent in CAppUpdateDepotsJob::YieldingFileValidation 
+ID 1008, Size 8, Sent in CClientJobPurchaseWithActivationCode::BYieldingRunAPIJob 
+ID 1009, Size 136, Sent in CUserAppManager::SchedulerThink 
 ID 1010, Size 8, Sent in CUser::OptionalDLCInstallation 
+ID 1011, Size 1, Sent in CClientJobRequestPackageInfoUpdate::BYieldingRunAPIJob 
 ID 1101, Size 20, Sent in CAPIJobRequestUserStats::BYieldingRunAPIJob CClientJobStatsUpdated::BYieldingRunClientJob 
 ID 1102, Size 12, Sent in CAPIJobStoreUserStats::PostCallback 
 ID 1103, Size 148, Sent in CUserStats::GetOrFetchAchievementIcon CUserStats::OnAchievementIconLoaded 
@@ -163,13 +177,8 @@ ID 1303, Size 280, Sent in CClientJobRemoteStorageSync::PostProgress
 ID 1304, Size 8, Sent in CClientJobRemoteStorageSync::YieldingInitCaches 
 ID 1305, Size 8, Sent in CClientJobRemoteStorageSync::BYieldingBuildFileListToSync CClientJobRemoteStorageSync::BYieldingRunClientJob CUserRemoteStorage::EvaluateRemoteStorageSyncState 
 ID 1306, Size 8, Sent in CClientJobRemoteStorageSync::BYieldingBuildFileListToSync CClientJobRemoteStorageSync::BYieldingRunClientJob CClientJobRemoteStorageSync::DownloadFiles CClientJobRemoteStorageSync::UploadFiles 
-ID 1307, Size 12, Sent in CAPIJobShareFile::BYieldingRunAPIJob 
+ID 1307, Size 12, Sent in CAPIJobShareFile::BYieldingRunAPIJob CBaseAPIJob::PostAPIResult<RemoteStorageFileShareResult_t> 
 ID 1308, Size 32, Sent in CAPIJobDownloadUGC::BYieldingRunAPIJob 
-ID 1309, Size 20, Sent in CAPIJobUploadScreenshots::PostProgress 
-ID 1310, Size 1044, Sent in CUserRemoteStorage::RecoverScreenshot CUserRemoteStorage::ScreenshotWrite 
-ID 1311, Size 1620, Sent in CAPIJobUploadScreenshots::BYieldingRunAPIJob 
-ID 1312, Size 8, Sent in CAPIJobDeleteScreenshots::BYieldingRunAPIJob CAPIJobUploadScreenshots::BYieldingRunAPIJob 
-ID 1315, Size 1036, Sent in CAPIJobDeleteScreenshots::BYieldingRunAPIJob 
 ID 1603, Size 4, Sent in CSteamEngine::SetCellID 
 ID 1701, Size 4, Sent in CClientGameCoordinator::MessageReceived 
 ID 1702, Size 1, Sent in CClientJobGCMessageFailed::BYieldingRunClientJob 
@@ -178,5 +187,18 @@ ID 1801, Size 12, Sent in CAPIJobStoreUserStats::PostCallback
 ID 2001, Size 16, Sent in CAPIJobGetNewSession::BYieldingRunAPIJob 
 ID 2002, Size 12, Sent in CAPIJobEndSession::BYieldingRunAPIJob 
 ID 2101, Size 20, Sent in CClientHTTPWaitRequestJob::BYieldingRunAPIJob 
+ID 2201, Size 20, Sent in CAPIJobUploadScreenshots::PostProgress 
+ID 2202, Size 24, Sent in CUserScreenshots::AddScreenshotToLibrary CUserScreenshots::RecoverScreenshot CUserScreenshots::WriteScreenshot 
+ID 2203, Size 600, Sent in CAPIJobUploadScreenshots::BYieldingRunAPIJob 
+ID 2204, Size 8, Sent in CAPIJobDeleteScreenshots::BYieldingRunAPIJob CAPIJobUploadScreenshots::BYieldingRunAPIJob 
+ID 2205, Size 16, Sent in CAPIJobDeleteScreenshots::BYieldingRunAPIJob 
+ID 2206, Size 8, Sent in CUserScreenshots::TriggerScreenshot 
+ID 2207, Size 4, Sent in CUserScreenshots::HookScreenshots 
+ID 2301, Size 4, Sent in CUserScreenshots::AddScreenshotToLibrary CUserScreenshots::WriteScreenshot 
+ID 2302, Size 1, Sent in CUserScreenshots::RequestScreenshotFromGame 
+ID 2401, Size 4, Sent in CClientAudio::PlayAudio 
+ID 2402, Size 4, Sent in CClientAudio::StopAudio 
+ID 2403, Size 4, Sent in CClientAudio::PauseAudio 
+ID 2404, Size 4, Sent in CClientAudio::UnPauseAudio 
 ID 268435457, Size 2056, Sent in CCMInterface::RecvPkt 
 ID 268435458, Size 12, Sent in CCMInterface::IssueClientServiceCall 

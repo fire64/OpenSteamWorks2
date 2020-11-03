@@ -34,7 +34,7 @@ bytes_sent (
 DEPRECATED_ticket (
 
 ticket_crc (
-ticket_sequence ("ï
+ticket_sequence ("Ž
 CMsgClientLogon
 protocol_version (
 obfustucated_private_ip (
@@ -68,15 +68,18 @@ machine_id (
 	auth_codeT (	
 otp_typeU (
 	otp_valueV (
-otp_identifierW (	"
+otp_identifierW (	
+steam2_ticket_requestX ("·
 CMsgClientLogonResponse
 eresult (:2%
 out_of_game_heartbeat_seconds (!
 in_game_heartbeat_seconds (
 	public_ip (
 rtime32_server_time (
-account_flags (
-email_domain (	
+account_flags (
+cell_id (
+email_domain (	
+steam2_ticket	 (
 eresult_extended
  (
 client_supplied_steamid ("
@@ -165,10 +168,21 @@ CMsgGSKick
 Friend
 
 ulfriendid (
-efriendrelationship ("Î
+efriendrelationship ("Å
+CMsgClientFriendsGroupsList
+bremoval (
+bincremental (>
+friendGroups (2(.CMsgClientFriendsGroupsList.FriendGroupH
+memberships (23.CMsgClientFriendsGroupsList.FriendGroupsMembership5
+FriendGroup
+nGroupID (
+strGroupName (	=
+FriendGroupsMembership
+	ulSteamID (
+nGroupID ("å
 CMsgClientLicenseList
 eresult (:20
-licenses (2.CMsgClientLicenseList.Licenseî
+licenses (2.CMsgClientLicenseList.License…
 License
 
 package_id (
@@ -181,7 +195,8 @@ package_id (
 purchase_country_code (	
 license_type	 (
 territory_code
- ("|
+ (
+change_number ("|
 CMsgClientLBSSetScore
 app_id (
 leaderboard_id (
@@ -229,7 +244,7 @@ package_id (
 global_rank (
 score (
 details (
-ugc_id ("Å
+ugc_id ("ñ
 CMsgClientAccountInfo
 persona_name (	
 
@@ -238,7 +253,9 @@ ip_country (	
 sha_digest_Password (
 count_authed_computers (
 locked_with_ipt (
-account_flags ("¿
+account_flags (
+facebook_id (
+facebook_name	 (	"¿
 CMsgClientAppMinutesPlayedDataL
 minutes_played (24.CMsgClientAppMinutesPlayedData.AppMinutesPlayedDataO
 AppMinutesPlayedData
@@ -254,10 +271,10 @@ ip_country (	
 persona_state (
 player_name (	
 is_auto_generated_name (
-high_priority ("µ
+high_priority ("á
 CMsgClientPersonaState
 status_flags (/
-friends (2.CMsgClientPersonaState.FriendÓ
+friends (2.CMsgClientPersonaState.Friendÿ
 Friend
 friendid (
 persona_state (
@@ -280,7 +297,9 @@ last_logon. (
 	game_name7 (	
 gameid8 (
 game_data_blob< (
-clan_tagA (	"5
+clan_tagA (	
+facebook_nameB (	
+facebook_idC ("5
 CMsgClientFriendProfileInfo
 steamid_friend ("ó
 #CMsgClientFriendProfileInfoResponse
@@ -717,7 +736,20 @@ has_wallet (
 
 section_id (
 
-section_kv ("D
+section_kv ("K
+CMsgClientPackageInfoRequest
+package_ids (
+meta_data_only ("à
+CMsgClientPackageInfoResponse8
+packages (2&.CMsgClientPackageInfoResponse.Package
+packages_unknown (
+packages_pending (Q
+Package
+
+package_id (
+change_number (
+sha (
+buffer ("D
 CMsgClientUFSGetUGCDetails&
 hcontent (:18446744073709551615"€
 "CMsgClientUFSGetUGCDetailsResponse
@@ -754,7 +786,23 @@ time_stamp (
 #CMsgClientAMGetClanOfficersResponse
 eresult (:2
 steamid_clan (
-officer_count ("E
+officer_count ("
+!CMsgClientAMGetPersonaNameHistory
+id_count (:
+Ids (2-.CMsgClientAMGetPersonaNameHistory.IdInstance
+
+IdInstance
+steamid ("Ã
+)CMsgClientAMGetPersonaNameHistoryResponseO
+	responses (2<.CMsgClientAMGetPersonaNameHistoryResponse.NameTableInstanceÄ
+NameTableInstance
+eresult (:2
+steamid (X
+names (2I.CMsgClientAMGetPersonaNameHistoryResponse.NameTableInstance.NameInstance0
+NameInstance
+
+name_since (
+name (	"E
 CMsgClientDeregisterWithServer
 eservertype (
 app_id ("Ž
@@ -800,7 +848,10 @@ event_time (
 steam_id_added (
 persona_name_added (	"*
 CMsgClientRemoveFriend
-friendid ("Å
+friendid ("6
+CMsgClientHideFriend
+friendid (
+hide ("·
 CMsgClientUCMAddScreenshot
 appid (
 filename (	
@@ -810,7 +861,13 @@ event_time (
 height (
 permissions (
 caption (	
-shortcut_name	 (	"d
+shortcut_name	 (	,
+tag
+ (2.CMsgClientUCMAddScreenshot.Tag
+tagged_steamid (*
+Tag
+tag_name (	
+	tag_value (	"d
 "CMsgClientUCMAddScreenshotResponse
 eresult (:2*
 screenshotid (:18446744073709551615"K
@@ -848,31 +905,7 @@ $CMsgClientCheckFileSignatureResponse
 filesize (
 getlasterror	 ("
 evalvesignaturecheckdetail
- ("
-CMsgClientUCMGetScreenshotList
-permissions (
-appid (
-start (
-max_results (
-shortcut_name (	"ÿ
-&CMsgClientUCMGetScreenshotListResponse
-eresult (:2
-results_available (K
-screenshots (26.CMsgClientUCMGetScreenshotListResponse.ScreenshotInfoØ
-ScreenshotInfo
-file_id (
-width (
-height (
-appid (
-time_created (
-comment_count (
-caption (	
-
-permission (
-url	 (	
-	thumb_url
- (	
-shortcut_name (	"P
+ ("P
 CMsgClientReadMachineAuth
 filename (	
 offset (
@@ -922,6 +955,32 @@ cubtowrite (
 	otp_value
  ("7
 $CMsgClientRequestMachineAuthResponse
+eresult ("A
+CMsgClientCreateFriendGroup
+steamid (
+	groupname (	"G
+#CMsgClientCreateFriendGroupResponse
+eresult (
+groupid ("?
+CMsgClientDeleteFriendGroup
+steamid (
+groupid ("6
+#CMsgClientDeleteFriendGroupResponse
+eresult ("A
+CMsgClientRenameFriendGroup
+groupid (
+	groupname (	"6
+#CMsgClientRenameFriendGroupResponse
+eresult ("B
+CMsgClientAddFriendToGroup
+groupid (
+steamiduser ("5
+"CMsgClientAddFriendToGroupResponse
+eresult ("G
+CMsgClientRemoveFriendFromGroup
+groupid (
+steamiduser (":
+'CMsgClientRemoveFriendFromGroupResponse
 eresult ("$
 CMsgClientRegisterKey
 key (	"p
@@ -952,14 +1011,89 @@ other_name (	"f
 CMsgTrading_CancelTradeRequest
 other_steamid ("1
 CMsgTrading_StartSession
-other_steamid ("U
+other_steamid ("Q
+"CMsgClientMDSInitDepotBuildRequest
+depot_id (
+encrypted_aes_key ("‰
+#CMsgClientMDSInitDepotBuildResponse
+eresult (:2
+default_chunk_size (
+base_manifest (
+encrypted_depot_key (":
+CMsgClientMDSLoginRequest
+encrypted_session_key ("0
+CMsgClientMDSLoginResponse
+eresult (:2"Ó
+CMsgClientMDSUploadDepotChunks
+depot_id (?
+chunks (2/.CMsgClientMDSUploadDepotChunks.ChunkUploadData^
+ChunkUploadData
+sha (
+rolling_crc (
+original_chunk_size (
+data ("<
+&CMsgClientMDSUploadDepotChunksResponse
+eresult (:2"F
+&CMsgClientMDSTransmitManifestDataChunk
+offset (
+data ("£
+"CMsgClientMDSUploadManifestRequest
+depot_id ( 
+manifest_size_compressed ("
+manifest_size_uncompressed (
+make_public (
+beta_key (	"¶
+#CMsgClientMDSUploadManifestResponse
+eresult (:2
+new_manifest (
+unique_chunks (
+missing_chunks (#
+bitstring_size_uncompressed (
+	bitstring ("F
+CMsgClientMDSGetDepotManifest
+depot_id (
+manifest_id ("
+%CMsgClientMDSGetDepotManifestResponse
+eresult (:2"
+manifest_size_uncompressed ( 
+manifest_size_compressed ("B
+"CMsgClientMDSGetDepotManifestChunk
+offset (
+data ("U
 CMsgClientEmailChange
 password (	
 email (	
 code (	
 final ("3
 CMsgClientEmailChangeResponse
-eresult (:2"™
+eresult (:2">
+CMsgClientGetCDNAuthToken
+app_id (
+	host_name (	"_
+!CMsgClientGetCDNAuthTokenResponse
+eresult (:2
+token (	
+expiration_time ("¸
+CMsgDownloadRateStatistics
+cell_id (4
+stats (2%.CMsgDownloadRateStatistics.StatsInfoS
+	StatsInfo
+source_type (
+	source_id (
+seconds (
+bytes ("H
+CMsgClientRequestAccountData
+account_or_email (	
+action ("×
+$CMsgClientRequestAccountDataResponse
+action (
+eresult (
+account_name (	
+
+ct_matches ( 
+account_name_suggestion1 (	 
+account_name_suggestion2 (	 
+account_name_suggestion3 (	"™
 CMsgClientUGSGetGlobalStats
 gameid (
 history_days_requested (

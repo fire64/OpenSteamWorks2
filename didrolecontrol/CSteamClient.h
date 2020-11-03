@@ -25,6 +25,7 @@ class CSteamClient
 	virtual unknown_ret GetIClientGameServerStats( int32, int32, const char * ) = 0;
 	virtual unknown_ret GetIClientNetworking( int32, int32, const char * ) = 0;
 	virtual unknown_ret GetIClientRemoteStorage( int32, int32, const char * ) = 0;
+	virtual unknown_ret GetIClientScreenshots( int32, int32, const char * ) = 0;
 	virtual unknown_ret SetWarningMessageHook( void ( * )( int32, const char * ) ) = 0;
 	virtual unknown_ret GetIClientGameCoordinator( int32, int32, const char * ) = 0;
 	virtual unknown_ret SetOverlayNotificationPosition( ENotificationPosition ) = 0;
@@ -38,6 +39,7 @@ class CSteamClient
 	virtual unknown_ret GetIClientGameStats( int32, int32, const char * ) = 0;
 	virtual unknown_ret GetIClientHTTP( int32, int32, const char * ) = 0;
 	virtual unknown_ret BShutdownIfAllPipesClosed() = 0;
+	virtual unknown_ret GetIClientAudio( int32, int32, const char * ) = 0;
 	virtual unknown_ret ~CSteamClient() = 0;
 	virtual unknown_ret ~CSteamClient() = 0;
 	virtual unknown_ret GetIPCServerMap() = 0;

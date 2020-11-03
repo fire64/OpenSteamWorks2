@@ -22,24 +22,8 @@ class IClientRemoteStorageMap
 	virtual uint32 UGCRead( uint64, void *, int32 ) = 0;
 	virtual uint32 GetCachedUGCCount() = 0;
 	virtual uint64 GetCachedUGCHandle( int32 ) = 0;
-	virtual const char * GetShortcutDisplayName( CGameID ) = 0;
-	virtual void SetShortcutDisplayName( CGameID, const char * ) = 0;
-	virtual uint32 ScreenshotWrite( CGameID, void *, uint32, int32, int32 ) = 0;
-	virtual uint8 ScreenshotResolvePath( CGameID, const char *, bool, char *, uint32 ) = 0;
-	virtual uint32 ScreenshotGetFileSize( CGameID, const char * ) = 0;
-	virtual uint32 GetNumGamesWithLocalScreenshots() = 0;
-	virtual uint64 GetGameWithLocalScreenshots( int32 ) = 0;
-	virtual uint32 GetLocalScreenshotCount( CGameID ) = 0;
-	virtual uint8 GetLocalScreenshot( CGameID, int32, char *, uint32, int32 *, int32 *, uint32 *, EScreenshotPrivacyState *, uint64 *, char *, uint32 ) = 0;
-	virtual uint8 SetLocalScreenshotCaption( CGameID, const char *, const char * ) = 0;
-	virtual uint8 SetLocalScreenshotPrivacy( CGameID, const char *, EScreenshotPrivacyState ) = 0;
-	virtual uint8 ScreenshotStartBatch( CGameID ) = 0;
-	virtual uint8 ScreenshotAddToBatch( const char * ) = 0;
-	virtual uint64 ScreenshotUploadBatch( EScreenshotPrivacyState ) = 0;
-	virtual uint64 ScreenshotDeleteBatch( bool ) = 0;
-	virtual uint8 ScreenshotCancelBatch() = 0;
-	virtual void RecoverOldScreenshots() = 0;
 	virtual uint32 FilePersist( uint32, ERemoteStorageFileRoot, const char * ) = 0;
+	virtual uint8 FileFetch( uint32, ERemoteStorageFileRoot, const char * ) = 0;
 	virtual uint8 ResolvePath( uint32, ERemoteStorageFileRoot, const char *, char *, uint32 ) = 0;
 	virtual void SetCloudEnabledForAccount( bool ) = 0;
 	virtual void LoadLocalFileInfoCache( uint32 ) = 0;
@@ -52,5 +36,6 @@ class IClientRemoteStorageMap
 	virtual uint8 IsAppSyncInProgress( uint32 ) = 0;
 	virtual uint32 ERemoteStorageFileRootFromName( const char * ) = 0;
 	virtual const char * PchNameFromERemoteStorageFileRoot( ERemoteStorageFileRoot ) = 0;
+	virtual uint8 ResetFileRequestState( uint32 ) = 0;
 };
 

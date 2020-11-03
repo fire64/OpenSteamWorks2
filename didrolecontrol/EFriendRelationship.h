@@ -7,4 +7,5 @@ enum EFriendRelationship
 	k_EFriendRelationshipFriend = 3,	// Friend
 	k_EFriendRelationshipIgnored = 5,	// Ignored
 	k_EFriendRelationshipIgnoredFriend,	// IgnoredFriend
+	k_EFriendRelationshipSuggestedFriend,	// SuggestedFriend
 }
