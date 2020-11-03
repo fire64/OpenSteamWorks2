@@ -36,7 +36,7 @@ ID 145, Size 4, Sent in CClientJobRequestChangeMail::BYieldingRunAPIJob
 ID 146, Size 4, Sent in CClientJobVerifyPassword::BYieldingRunAPIJob 
 ID 147, Size 8, Sent in CSteamEngine::ScheduledRefreshSteam2Login 
 ID 148, Size 513, Sent in CClientJobGetWGAuthToken::BYieldingRunAPIJob 
-ID 149, Size 12, Sent in 
+ID 149, Size 12, Sent in CClientJobMicroTxnAuthRequest::BYieldingRunClientJob 
 ID 150, Size 4, Sent in CAPIJobAuthorizeMicroTxn::BYieldingRunAPIJob 
 ID 151, Size 4, Sent in CClientJobAppMinutesPlayed::BYieldingRunClientJob CUser::InternalRemoveClientGame 
 ID 152, Size 16, Sent in CUser::NotifyAppMicroTxnAuthResponse 
