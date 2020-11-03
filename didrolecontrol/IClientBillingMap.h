@@ -43,8 +43,8 @@ class IClientBillingMap
 	virtual void DisableTestLicense( uint32 ) = 0;
 	virtual uint8 ActivateOEMTicket( const char * ) = 0;
 	virtual uint8 GetLicenseForAppID( uint32, uint32 * ) = 0;
-	virtual uint8 GetPackageInfo( uint32, uint32 *, int32 *, ELicenseType *, EPackageStatus *, int32 *, int32 *, int32 * ) = 0;
-	virtual uint32 GetAppsInPackage( uint32, uint32 *, int32 ) = 0;
+	virtual uint8 GetPackageInfo( uint32, uint32 *, uint32 *, int32 *, ELicenseType *, EPackageStatus *, int32 *, int32 *, int32 * ) = 0;
+	virtual uint32 GetAppsInPackage( uint32, uint32 *, uint32, bool ) = 0;
 	virtual uint32 GetPackageExtendedInfo( uint32, const char *, char *, int32 ) = 0;
 };
 
