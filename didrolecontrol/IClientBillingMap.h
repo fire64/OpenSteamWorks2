@@ -31,6 +31,7 @@ class IClientBillingMap
 	virtual const char * GetReceiptErrorString( uint32 ) = 0;
 	virtual const char * GetReceiptErrorLinkText( uint32 ) = 0;
 	virtual const char * GetReceiptErrorLinkURL( uint32 ) = 0;
+	virtual uint32 GetReceiptErrorAppID( uint32 ) = 0;
 	virtual uint32 GetNumLicenses() = 0;
 	virtual uint32 GetNumReceipts() = 0;
 	virtual uint8 PurchaseWithMachineID( uint32, const char * ) = 0;

@@ -144,6 +144,7 @@ class IClientFriendsMap
 	virtual void SetPortTypes( uint32 ) = 0;
 	virtual void ReinitAudio() = 0;
 	virtual void SetInGameVoiceSpeaking( CSteamID, bool ) = 0;
+	virtual uint8 IsInGameVoiceSpeaking() = 0;
 	virtual void ActivateGameOverlay( const char * ) = 0;
 	virtual void ActivateGameOverlayToUser( const char *, CSteamID ) = 0;
 	virtual void ActivateGameOverlayToWebPage( const char * ) = 0;
@@ -173,5 +174,8 @@ class IClientFriendsMap
 	virtual const char * GetFriendProfileInfo( CSteamID, const char * ) = 0;
 	virtual uint8 InviteUserToGame( CSteamID, const char * ) = 0;
 	virtual uint32 GetOnlineConsoleFriendCount() = 0;
+	virtual uint64 RequestTrade( CSteamID ) = 0;
+	virtual void TradeResponse( uint32, bool ) = 0;
+	virtual void CancelTradeRequest( CSteamID ) = 0;
 };
 

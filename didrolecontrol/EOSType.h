@@ -8,6 +8,7 @@ enum EOSType
 	k_EOSTypeMacos106 = -95,	// macos106
 	k_EOSTypeMacos1063,	// macos1063
 	k_EOSTypeMacos1064_slgu,	// macos1064_slgu
+	k_EOSTypeMacos1067,	// macos1067
 	k_EOSTypeMacos107 = -90,	// macos107
 	k_EOSTypeLinux = -203,	// linux
 	k_EOSTypeLinux22,	// linux22

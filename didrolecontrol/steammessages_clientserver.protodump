@@ -923,11 +923,14 @@ $CMsgClientRequestMachineAuthResponse
 CMsgClientPurchaseResponse
 eresult (:2
 purchase_result_details (
-purchase_receipt_info ("j
+purchase_receipt_info ("Å
 CMsgClientActivateOEMLicense
 bios_manufacturer (	
 bios_serialnumber (	
-license_file ("K
+license_file (
+mainboard_manufacturer (	
+mainboard_product (	
+mainboard_serialnumber (	"K
 CMsgClientPurchaseWithMachineID
 
 package_id (
@@ -936,11 +939,15 @@ package_id (
 trade_request_id (
 other_steamid (
 
-other_name (	"O
+other_name (	"f
 !CMsgTrading_InitiateTradeResponse
 response (
-trade_request_id ("
-CMsgTrading_StartSession"U
+trade_request_id (
+other_steamid ("7
+CMsgTrading_CancelTradeRequest
+other_steamid ("1
+CMsgTrading_StartSession
+other_steamid ("U
 CMsgClientEmailChange
 password (	
 email (	

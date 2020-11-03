@@ -80,6 +80,7 @@ class IClientUserMap
 	virtual uint8 RequiresLegacyCDKey( uint32 ) = 0;
 	virtual uint8 GetLegacyCDKey( uint32, char *, int32 ) = 0;
 	virtual uint8 HasLegacyCDKey( uint32 ) = 0;
+	virtual uint8 SetLegacyCDKey( uint32, const char * ) = 0;
 	virtual void RemoveLegacyCDKey( uint32 ) = 0;
 	virtual void StartVoiceRecording() = 0;
 	virtual void StopVoiceRecording() = 0;
