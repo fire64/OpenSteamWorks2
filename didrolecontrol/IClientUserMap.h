@@ -58,7 +58,6 @@ class IClientUserMap
 	virtual uint8 GetLanguage( char *, int32 ) = 0;
 	virtual void SetCyberCafe( bool ) = 0;
 	virtual void CreateAccount( const char *, const char *, const char *, int32, const char *, const char * ) = 0;
-	virtual void CheckPassword( const char *, const char *, bool ) = 0;
 	virtual uint64 ResetPassword( const char *, const char *, const char *, const char *, const char * ) = 0;
 	virtual void TrackNatTraversalStat( CNatTraversalStat  const* ) = 0;
 	virtual void RefreshSteam2Login() = 0;

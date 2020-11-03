@@ -17,5 +17,6 @@ class IClientConfigStoreMap
 	virtual uint8 SetBinaryWatermarked( EConfigStore, const char *, const uint8 *, uint32 ) = 0;
 	virtual uint8 RemoveKey( EConfigStore, const char * ) = 0;
 	virtual uint32 GetKeySerialized( EConfigStore, const char *, uint8 *, int32 ) = 0;
+	virtual uint8 FlushToDisk( bool ) = 0;
 };
 
