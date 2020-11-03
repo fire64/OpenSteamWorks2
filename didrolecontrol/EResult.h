@@ -67,4 +67,5 @@ enum EResult
 	k_EResultOperationFailedDueToParentalControlRestrictionsForCurrentUser,	// Operation failed due to parental control restrictions for current user
 	k_EResultFacebookQueryReturnedAnError,	// Facebook query returned an error
 	k_EResultExpiredLoginAuthCode,	// Expired Login Auth Code
+	k_EResultIPLoginRestrictionFailed,	// IP Login Restriction Failed
 }
