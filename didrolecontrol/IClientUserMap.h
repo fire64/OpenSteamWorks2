@@ -160,5 +160,6 @@ class IClientUserMap
 	virtual void Set2ndFactorAuthCode( const char * ) = 0;
 	virtual uint8 GetEmailDomainFromLogonFailure( char *, int32 ) = 0;
 	virtual void OptionalDLCInstallation( uint32, bool ) = 0;
+	virtual void AckSystemIM( uint64 ) = 0;
 };
 

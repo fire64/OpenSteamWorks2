@@ -126,7 +126,7 @@ ID 841, Size 16, Sent in CAPIJobRequestTrade::BYieldingRunAPIJob
 ID 842, Size 8, Sent in CClientJobIncomingTradeSessionStart::BYieldingRunClientJob 
 ID 843, Size 16, Sent in CClientJobInitiateTradeResult::BYieldingRunClientJob 
 ID 844, Size 1, Sent in CUserFriends::UpdateInGameVoiceSpeakingState 
-ID 901, Size 4100, Sent in CClientJobSystemIM::BYieldingRunClientJob 
+ID 901, Size 4108, Sent in CClientJobSystemIM::BYieldingRunClientJob 
 ID 902, Size 24, Sent in CClientJobReceiveGuestPassGiftTarget::BYieldingRunClientJob 
 ID 903, Size 2, Sent in CUser::NotifyPrimaryChatDestination 
 ID 904, Size 1, Sent in CCMInterface::ScheduledAttemptReconnect 
