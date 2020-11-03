@@ -16,7 +16,7 @@ class IClientRemoteStorageMap
 	virtual uint8 GetQuota( uint32, int32 *, int32 * ) = 0;
 	virtual uint8 IsCloudEnabledForAccount() = 0;
 	virtual uint8 IsCloudEnabledForApp( uint32 ) = 0;
-	virtual void SetCloudEnabledForApp( uint32, bool ) = 0;
+	virtual unknown_ret SetCloudEnabledForApp( uint32, bool ) = 0;
 	virtual uint64 UGCDownload( uint64 ) = 0;
 	virtual uint8 GetUGCDetails( uint64, uint32 *, char **, int32 *, CSteamID * ) = 0;
 	virtual uint32 UGCRead( uint64, void *, int32 ) = 0;

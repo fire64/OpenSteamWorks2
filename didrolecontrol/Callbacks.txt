@@ -11,7 +11,7 @@ ID 116, Size 12, Sent in CClientJobNewsItemUpdateMsg::BYieldingRunClientJob
 ID 118, Size 72, Sent in CCMInterface::RecvPkt 
 ID 119, Size 1, Sent in CClientJobAccountInfo::BYieldingRunClientJob CClientJobEmailAddrInfo::BYieldingRunClientJob 
 ID 120, Size 4, Sent in CClientJobSendGuestPassResponse::BYieldingRunClientJob CUser::SendGuestPassByAccountID CUser::SendGuestPassByEmail 
-ID 121, Size 24, Sent in 
+ID 121, Size 24, Sent in CClientJobAckGuestPassResponse::BYieldingRunClientJob CUser::AckGuestPass 
 ID 122, Size 12, Sent in CClientJobRedeemGuestPassResponse::BYieldingRunClientJob CUser::RedeemGuestPass 
 ID 123, Size 12, Sent in CClientJobUpdateGuestPassesList::BYieldingRunClientJob 
 ID 124, Size 1, Sent in CUser::SetAccountCreationTime 
