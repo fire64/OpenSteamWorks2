@@ -15,5 +15,6 @@ class IClientHTTPMap
 	virtual uint8 GetHTTPResponseBodyData( uint32, uint8 *, uint32 ) = 0;
 	virtual uint8 ReleaseHTTPRequest( uint32 ) = 0;
 	virtual uint8 GetHTTPDownloadProgressPct( uint32, float * ) = 0;
+	virtual uint8 SetHTTPRequestRawPostBody( uint32, const char *, uint8 *, uint32 ) = 0;
 };
 
