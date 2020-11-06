@@ -187,7 +187,7 @@ reactionid (
 published_file_id (
 time_updated (
 manifest_id (
-flags ("Ç
+flags ("Ž
 #CPublishedFile_GetUserFiles_RequestJ
 steamid (B9‚µ5Steam ID of the user whose files are being requested.F
 appid (B7‚µ3App Id of the app that the files were published to.:
@@ -220,7 +220,8 @@ sortmethod (	:lastupdatedB8‚µ4(Optional) Sorting method to use on returned 
 return_metadata (:falseB‚µPopulate the metadata fieldg
 return_playtime_stats (BH‚µDReturn playtime stats for the specified number of days before today.F
 strip_description_bbcode  (B$‚µ Strips BBCode from descriptions.W
-return_reactions# (:falseB6‚µ2If true, then reactions to items will be returned.„
+return_reactions# (:falseB6‚µ2If true, then reactions to items will be returned.E
+startindex_override (B(‚µ$Backwards compatible for the client.„
 desired_revision! (2.EPublishedFileRevision: k_EPublishedFileRevision_DefaultB/‚µ+Return the data for the specified revision.#
 KVTag
 key (	

@@ -4,6 +4,7 @@ class IClientCompatMap
 	virtual void EnableCompat( bool ) = 0;
 	virtual void GetAvailableCompatTools( CUtlVector<CUtlString, CUtlMemory<CUtlString>> * ) = 0;
 	virtual void GetAvailableCompatToolsFiltered( CUtlVector<CUtlString, CUtlMemory<CUtlString>> *, ERemoteStoragePlatform ) = 0;
+	virtual void GetAvailableCompatToolsForApp( CUtlVector<CUtlString, CUtlMemory<CUtlString>> *, uint32 ) = 0;
 	virtual void SpecifyCompatTool( uint32, char const*, char const*, int32 ) = 0;
 	virtual void * BIsCompatibilityToolEnabled( uint32 ) = 0;
 	virtual const char * GetCompatToolName( uint32 ) = 0;

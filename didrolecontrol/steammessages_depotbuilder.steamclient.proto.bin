@@ -1,10 +1,11 @@
 
-,steammessages_depotbuilder.steamclient.proto,steammessages_unified_base.steamclient.proto"w
+,steammessages_depotbuilder.steamclient.proto,steammessages_unified_base.steamclient.proto"Ž
 &CContentBuilder_InitDepotBuild_Request
 appid (
 depotid (
 workshop_itemid (
-for_local_cs ("ˆ
+for_local_cs (
+target_branch (	"ˆ
 'CContentBuilder_InitDepotBuild_Response
 baseline_manifestid (
 

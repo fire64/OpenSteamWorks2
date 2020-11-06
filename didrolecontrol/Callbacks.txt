@@ -140,13 +140,11 @@ ID 937, Size 1, Sent in CClientJobMarketingMessageUpdate2Msg::BYieldingRunClient
 ID 938, Size 4, Sent in CClientJobRequestValidateMail::BYieldingRunAPIJob 
 ID 940, Size 4, Sent in CClientJobVerifyPassword::BYieldingRunAPIJob 
 ID 942, Size 1025, Sent in CClientJobGetWGAuthToken::BYieldingRunAPIJob 
-ID 943, Size 12, Sent in CClientJobMicroTxnAuthRequest::BYieldingRunClientJob 
+ID 943, Size 16, Sent in CClientJobMicroTxnAuthRequest::BYieldingRunClientJob 
 ID 944, Size 8, Sent in CAPIJobAuthorizeMicroTxn::BYieldingRunAPIJob 
 ID 946, Size 4, Sent in CUser::InternalRemoveClientGame CUser::ProcessAppLastPlayedTimes 
 ID 948, Size 1, Sent in CUser::SetWalletInfo 
 ID 949, Size 4, Sent in CClientJobRequestMachineAuth::BYieldingRunAPIJob 
-ID 952, Size 12, Sent in CClientJobRequestAccountData::BYieldingRunAPIJob 
-ID 953, Size 196, Sent in CClientJobRequestAccountData::BYieldingRunAPIJob 
 ID 955, Size 74, Sent in CUser::SetAccountNameForCachedCredentialLogin CUser::SetLoginInformation 
 ID 958, Size 4, Sent in CClientJobUpdateItemAnnouncements::BYieldingRunClientJob 
 ID 960, Size 12, Sent in CClientJobUpdateCommentNotifications::BYieldingRunClientJob 
@@ -185,7 +183,7 @@ ID 1001, Size 4, Sent in CSteamEngine::PostCallbackToAllUI<AppInfoChanged_t> CSt
 ID 1003, Size 12, Sent in CSteamEngine::PostCallbackToAllUsers<AppInfoUpdateComplete_t> 
 ID 1005, Size 4, Sent in CAppUpdateContext::NotifyAboutAddedDLC 
 ID 1006, Size 16, Sent in CSteamEngine::PostCallbackToAllUsers<AppEventStateChange_t> 
-ID 1007, Size 36, Sent in CSteamEngine::PostCallbackToAllUsers<AppValidationComplete_t> 
+ID 1007, Size 32, Sent in CSteamEngine::PostCallbackToAllUsers<AppValidationComplete_t> 
 ID 1009, Size 136, Sent in CSteamEngine::PostCallbackToAllUsers<DownloadScheduleChanged_t> 
 ID 1010, Size 12, Sent in CSteamEngine::PostCallbackToAllUsers<AppUpdateStateChange_t> 
 ID 1011, Size 32, Sent in CSteamEngine::PostCallbackToAllUsers<AppLaunchTenFootOverlay_t> 
@@ -195,7 +193,7 @@ ID 1016, Size 8, Sent in CUserAppManager::SetAppAutoUpdateBehavior
 ID 1017, Size 20, Sent in CSteamEngine::PostCallbackToAllUsers<AppInfoUpdateProgress_t> 
 ID 1018, Size 572, Sent in CSteamEngine::PostCallbackToAllUsers<AppUpdateStopped_t> 
 ID 1019, Size 4, Sent in CUser::AddAppTag CUser::ClearAndSetAppTags CUser::ClearAppTags CUser::RemoveAppTag CUser::SetAppHidden CUserAppInfo::SetUserAppConfig 
-ID 1020, Size 72, Sent in EYieldingCheckAppBetaPassword 
+ID 1020, Size 200, Sent in EYieldingCheckAppBetaPassword 
 ID 1021, Size 252, Sent in CUser::PostLegacyCDKeyResponseToApp 
 ID 1022, Size 1, Sent in CSteamEngine::PostCallbackToAllUI<AppConfigInitialized_t> 
 ID 1024, Size 24, Sent in CSteamEngine::PostCallbackToAllUsers<AppMoveFolderResult_t> 

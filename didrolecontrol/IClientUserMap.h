@@ -100,7 +100,6 @@ class IClientUserMap
 	virtual void GetTwoFactorDetails() = 0;
 	virtual void * BHasTwoFactor() = 0;
 	virtual void * GetEmail( char *, int32, bool * ) = 0;
-	virtual void FindAccountsByCdKey( char const* ) = 0;
 	virtual void Test_FakeConnectionTimeout() = 0;
 	virtual void * RunInstallScript( uint32, char const*, bool ) = 0;
 	virtual void * IsInstallScriptRunning() = 0;
@@ -146,6 +145,7 @@ class IClientUserMap
 	virtual void * GetMicroTxnAppID( uint64 ) = 0;
 	virtual void * GetMicroTxnOrderID( uint64 ) = 0;
 	virtual void * BGetMicroTxnPrice( uint64, CAmount *, CAmount *, bool *, CAmount * ) = 0;
+	virtual void * GetMicroTxnSteamRealm( uint64 ) = 0;
 	virtual void * GetMicroTxnLineItemCount( uint64 ) = 0;
 	virtual void * BGetMicroTxnLineItem( uint64, uint32, CAmount *, uint32 *, char *, uint32, int32 *, uint8 *, CAmount *, bool * ) = 0;
 	virtual void * BIsSandboxMicroTxn( uint64, bool * ) = 0;
@@ -178,6 +178,7 @@ class IClientUserMap
 	virtual void SetUserMachineName( char const* ) = 0;
 	virtual void * GetUserMachineName( char *, int32 ) = 0;
 	virtual void * GetEmailDomainFromLogonFailure( char *, int32 ) = 0;
+	virtual const char * GetAgreementSessionUrl() = 0;
 	virtual void * GetDurationControl() = 0;
 	virtual void * GetDurationControlForApp( uint32 ) = 0;
 	virtual void * BSetDurationControlOnlineState( EDurationControlOnlineState ) = 0;

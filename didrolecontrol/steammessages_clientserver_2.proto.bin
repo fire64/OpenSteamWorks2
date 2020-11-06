@@ -338,16 +338,18 @@ other_name (	"Ò
 'CMsgClientGetDepotDecryptionKeyResponse
 eresult (:2
 depot_id (
-depot_encryption_key ("F
+depot_encryption_key ("X
 CMsgClientCheckAppBetaPassword
 app_id (
-betapassword (	"Á
+betapassword (	
+language ("Ú
 &CMsgClientCheckAppBetaPasswordResponse
 eresult (:2K
-betapasswords (24.CMsgClientCheckAppBetaPasswordResponse.BetaPassword6
+betapasswords (24.CMsgClientCheckAppBetaPasswordResponse.BetaPasswordO
 BetaPassword
 betaname (	
-betapassword (	"¾
+betapassword (	
+betadescription (	"¾
 CMsgClientUpdateAppJobReport
 app_id (
 	depot_ids (

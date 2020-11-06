@@ -51,6 +51,8 @@ enum EOSType
 	k_EOSTypeLinux414,	// linux414
 	k_EOSTypeLinux419,	// linux419
 	k_EOSTypeLinux54 = -185,	// linux54
+	k_EOSTypeLinux6x,	// linux6x
+	k_EOSTypeLinux7x,	// linux7x
 	k_EOSTypeWindows = 0,	// windows
 	k_EOSTypeWin311,	// win311
 	k_EOSTypeWin95,	// win95

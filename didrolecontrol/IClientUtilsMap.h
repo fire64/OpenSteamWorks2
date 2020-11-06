@@ -11,7 +11,6 @@ class IClientUtilsMap
 	virtual const char * GetIPCountry() = 0;
 	virtual void * GetImageSize( int32, uint32 *, uint32 * ) = 0;
 	virtual void * GetImageRGBA( int32, uint8 *, int32 ) = 0;
-	virtual void * GetCSERIPPort( uint32 *, uint16 * ) = 0;
 	virtual void * GetNumRunningApps() = 0;
 	virtual void * GetCurrentBatteryPower() = 0;
 	virtual void * GetBatteryInformation( int32 *, bool * ) = 0;

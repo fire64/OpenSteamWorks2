@@ -1,5 +1,5 @@
 
-&steammessages_player.steamclient.proto,steammessages_unified_base.steamclient.proto"4
+&steammessages_player.steamclient.proto,steammessages_unified_base.steamclient.protoenums.proto"4
 2CPlayer_GetMutualFriendsForIncomingInvites_Request"\
 &CPlayer_IncomingInviteMutualFriendList
 steamid (!
@@ -198,7 +198,7 @@ cache_time ("3
 !CPlayer_SetFavoriteBadge_Response"c
 'CPlayer_GetProfileCustomization_Request
 steamid ('
-include_inactive_customizations ("…
+include_inactive_customizations ("¸
 ProfileCustomizationSlot
 slot (
 appid (
@@ -212,7 +212,8 @@ cache_time ("3
 border_color
  (
 item_classid (
-item_instanceid ("Ñ
+item_instanceid (1
+ban_check_result (2.EBanContentCheckResult"Ñ
 ProfileCustomization6
 customization_type (2.EProfileCustomizationType
 large ((
@@ -267,8 +268,9 @@ $CPlayer_PostStatusToFriends_Response"e
 first_linux_playtime (
 last_windows_playtime (
 last_mac_playtime (
-last_linux_playtime ("
-CPlayer_AcceptSSA_Request"
+last_linux_playtime ("D
+CPlayer_AcceptSSA_Request'
+agreement_type (2.EAgreementType"
 CPlayer_AcceptSSA_Response"!
 CPlayer_GetNicknameList_Request"ž
  CPlayer_GetNicknameList_ResponseC
@@ -307,12 +309,12 @@ $CPlayer_PostStatusToFriends_Response"e
 unignore (B<‚µ8If set, remove from ignore/block list instead of adding "\
 CPlayer_IgnoreFriend_Response;
 friend_relationship (B‚µthe resulting relationship")
-'CPlayer_GetCommunityPreferences_Request"Î
+'CPlayer_GetCommunityPreferences_Request"±
 CPlayer_CommunityPreferences)
 hide_adult_content_violence (:true$
 hide_adult_content_sex (:true%
-parenthesize_nicknames (:falseM
-text_filter_setting (2.ETextFilterSetting:k_ETextFilterSettingEnabled(
+parenthesize_nicknames (:false0
+text_filter_setting (2.ETextFilterSetting(
 text_filter_ignore_friends (:true"
 text_filter_words_revision (
 timestamp_updated ("^
@@ -412,7 +414,11 @@ $k_EProfileCustomizationStyleSelected&
 "k_EProfileCustomizationStyleRarest*
 &k_EProfileCustomizationStyleMostRecent&
 "k_EProfileCustomizationStyleRandom,
-(k_EProfileCustomizationStyleHighestRated*…
+(k_EProfileCustomizationStyleHighestRated*v
+EAgreementType%
+k_EAgreementType_Invalidÿÿÿÿÿÿÿÿÿ
+k_EAgreementType_GlobalSSA 
+k_EAgreementType_ChinaSSA*…
 ENotificationSetting*
 &k_ENotificationSettingNotifyUseDefault  
 k_ENotificationSettingAlways
